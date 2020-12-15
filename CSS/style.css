@@ -1,0 +1,126 @@
+body {
+    background-color:slateblue;
+}
+
+header, main, footer {
+    width: 95vw;
+    background-color: slategray;
+    border: 1px solid darkslategray;
+    margin: 2.5vh 2.5vw;
+    padding: 2.5vh 2.5vw;
+}
+header {
+    height: 10vh;
+}
+main {
+    height: 70vh;
+}
+footer {
+    height: 10vh;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.topButton {
+    display: inline-flex;
+    flex-direction: row row-reverse;
+    background-color:slategray;
+    border: 3px solid darkslategray;
+    width: auto;
+    height: auto;
+    margin: 1vh 1vh ;
+    padding: 1vh 1vh;
+    text-align: center;
+    font-size: 32px;
+}
+.topButton:hover {
+    background-color:lightslategray;
+    border: 5px solid darkslategray;
+}
+#moveBox{
+    position: relative;
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;    
+    animation: box;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#moveBox:active {
+    animation: box;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.homeLogo {
+    position: relative;
+    margin-left: 50px;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.homeLogo:active {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+#homeContent:hover {
+    background-color: lightslategray;
+}
+@keyframes box {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    50% {
+        background-color:blue;
+        transform: skew(40deg, 40deg);
+        left: 200px;
+        top: 100px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+@keyframes spin {
+    0% {
+        left: 0px;
+        opacity: 100%;
+    }
+    50% {
+        left: 300px;
+        opacity: 0%;
+    }
+    100% {
+        left: 0px;
+        opacity: 100%;
+    }
+}
+.bingo {  
+    overflow: auto;
+    border: 5px solid darkslategray;
+    background-color: slategray;
+    width: 500px;
+    height: auto;
+
+}
+.bingo tr {
+    align-content: center;
+}
+.bingo td {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px dashed darkslategray;
+    padding: 5%;
+    text-align: center;
+    width: 25%;
+    height: auto;
+}
+.socialembed {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    margin: 1vh 1vw;
+    padding: 1vh 1vw;
+}
