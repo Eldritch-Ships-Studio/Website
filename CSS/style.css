@@ -11,13 +11,13 @@ header, main, footer {
     padding: 2.5vh 2.5vw;
 }
 header {
-    height: 10vh;
+    height: auto;
 }
 main {
-    height: 60vh;
+    height: auto;
 }
 footer {
-    height: 10vh;
+    height: auto;
 }
 a {
     text-decoration: none;
@@ -27,7 +27,7 @@ a {
     display: inline-flex;
     flex-direction: row row-reverse;
     background-color:slategray;
-    border: 3px solid darkslategray;
+    border: .15em solid darkslategray;
     width: auto;
     height: auto;
     margin: 1vh 1vh ;
@@ -37,7 +37,7 @@ a {
 }
 .topButton:hover {
     background-color:lightslategray;
-    outline: 3px solid darkslategray;
+    outline: .1em solid darkslategray;
 }
 #moveBox{
     position: relative;
@@ -78,7 +78,7 @@ a {
     50% {
         background-color:blue;
         transform: skew(40deg, 40deg);
-        left: 200px;
+        left: 50px;
         top: 100px;
     }
     100% {
