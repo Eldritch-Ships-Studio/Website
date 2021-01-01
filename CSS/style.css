@@ -1,9 +1,10 @@
 body {
     background-color:slateblue;
+    overflow: auto;
 }
 
 header, main, footer {
-    width: 95vw;
+    width: 85vw;
     background-color: slategray;
     border: 1px solid darkslategray;
     margin: 2.5vh 2.5vw;
@@ -13,7 +14,7 @@ header {
     height: 10vh;
 }
 main {
-    height: 70vh;
+    height: 60vh;
 }
 footer {
     height: 10vh;
@@ -36,7 +37,7 @@ a {
 }
 .topButton:hover {
     background-color:lightslategray;
-    border: 5px solid darkslategray;
+    outline: 3px solid darkslategray;
 }
 #moveBox{
     position: relative;
@@ -91,7 +92,7 @@ a {
         opacity: 100%;
     }
     50% {
-        left: 300px;
+        left: 200px;
         opacity: 0%;
     }
     100% {
