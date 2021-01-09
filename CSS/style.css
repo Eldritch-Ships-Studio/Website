@@ -4,11 +4,11 @@ body {
 }
 
 header, main, footer {
-    width: 85vw;
+    width: auto;
     background-color: slategray;
-    border: 1px solid darkslategray;
-    margin: 2.5vh 2.5vw;
-    padding: 2.5vh 2.5vw;
+    outline: .1em solid darkslategray;
+    margin: 2vh 2vw;
+    padding: 2vh 2vw;
 }
 header {
     height: auto;
@@ -27,7 +27,7 @@ a {
     display: inline-flex;
     flex-direction: row row-reverse;
     background-color:slategray;
-    border: .15em solid darkslategray;
+    outline: .15em solid darkslategray;
     width: auto;
     height: auto;
     margin: 1vh 1vh ;
@@ -37,7 +37,7 @@ a {
 }
 .topButton:hover {
     background-color:lightslategray;
-    outline: .1em solid darkslategray;
+    outline: .2em solid darkslategray;
 }
 #moveBox{
     position: relative;
@@ -66,9 +66,6 @@ a {
     animation-name: spin;
     animation-duration: 2s;
     animation-timing-function: linear;
-}
-#homeContent:hover {
-    background-color: lightslategray;
 }
 @keyframes box {
     0% {
@@ -124,4 +121,14 @@ a {
     flex-direction: row-reverse;
     margin: 1vh 1vw;
     padding: 1vh 1vw;
+}
+#contactTwitter {
+    width:  64px;
+    height: 64px;
+    padding: auto;
+}
+#contactDiscord {
+    width:  64px;
+    height: 64px;
+    padding: auto;
 }
