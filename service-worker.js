@@ -22,7 +22,7 @@ self.addEventListener("fetch", e=>{
 });
 
 // Update a service worker
-const cacheWhitelist = ['Simon-game'];
+const cacheWhitelist = ['EldritchShipsStudios'];
 self.addEventListener('activate', event => {
     event.waitUntil(
       caches.keys().then(cacheNames => {
