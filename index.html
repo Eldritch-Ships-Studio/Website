@@ -25,51 +25,20 @@
     <script src="main.js"></script>
 </head>
 <body>
-<!-- <script>
-    if('serviceWorker' in navigator){
-        navigator.serviceWorker.register('/service-worker.js');
-    } else {
-        console.log("Service worker is not supported");
-    } -->
-</script>
-<!--<header class="topBanner">
-        <nav>
-        <h1 class="topButton"><a href="./index.html"><img src="Resources/Logos/Eldritch Ships Studios/EldritchShipsLogo.svg" h="128" height="128" alt="Home"></a></h1>
-        <h2 class="topButton"><a href="Pages\3D.html">3D</a></h2>
-        <h2 class="topButton"><a href="Pages\game.html">Games</a></h2>
-        <h2 class="topButton"><a href="Pages\stream.html">Stream</a></h2>
-        </nav>
-</header> -->
+<header class="topnav" id="myTopnav">
+    <a href="./index.html" class="active">Home</a>
+    <a href="./Pages/3D.html">3D</a>
+    <a href="./Pages/game.html">Games</a>
+    <a href="./Pages/stream.html">Stream</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</header>
 <main >
     <article>
         <h1>Eldritch Ships Studios</h1>
         <p>Eldritch Ships Studios is a self published creative portfolio by Lee Simmons</p>
     </article>
-    <div class="row">
-        <div class="column" onclick="openTab('b1');" style="background:green;">Box 1</div>
-        <div class="column" onclick="openTab('b2');" style="background:blue;">Box 2</div>
-        <div class="column" onclick="openTab('b3');" style="background:red;">Box 3</div>
-      </div>
-      
-      <!-- The expanding grid (hidden by default) -->
-      <div id="b1" class="containerTab" style="display:none;background:green">
-        <!-- If you want the ability to close the container, add a close button -->
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-        <h2>Box 1</h2>
-        <p>Lorem ipsum..</p>
-      </div>
-      
-      <div id="b2" class="containerTab" style="display:none;background:blue">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-        <h2>Box 2</h2>
-        <p>Lorem ipsum..</p>
-      </div>
-      
-      <div id="b3" class="containerTab" style="display:none;background:red">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
-        <h2>Box 3</h2>
-        <p>Lorem ipsum..</p>
-      </div>
 </main>
 <footer>
     <h2> <b>Eldritch Ships Studios</b> </h2>
@@ -80,7 +49,8 @@
         <a href="https://discord.gg/NP9RRxUk8P" target="_blank" rel="noopener"><img id="contactDiscord" src="Resources/Logos/Discord/Discord-Logo-Color.svg" width="64" height="64" alt="Discord"></a>
         
     </h3>
-    <p>Works Are Explicitly Public Domain 2019-2021 Eldritch Ships Studios</p>
+    <p>Works Are Explicitly Public Domain</p>
+    <p>2019-2021 Eldritch Ships Studios</p>
 </footer>
 </body>
 </html>

@@ -5,7 +5,7 @@ body {
 
 header, main, footer {
     width: auto;
-    background-color: slategray;
+    background-color: darkslategray;
     outline: .1em solid darkslategray;
     margin: 2vh 2vw;
     padding: 2vh 2vw;
@@ -19,10 +19,11 @@ main {
 footer {
     height: auto;
 }
-a {
+a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
-    color: black;
+    color: aliceblue;
 }
+button {background-color: slategray;}
 .topButton {
     display: inline-flex;
     flex-direction: row row-reverse;
@@ -116,35 +117,43 @@ a {
     width: 25%;
     height: auto;
 }
-/* The grid: Three equal columns that floats next to each other */
-.column {
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: darkslategray;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
     float: left;
-    width: 33.33%;
-    padding: 50px;
+    display: block;
+    color: aliceblue;
     text-align: center;
-    font-size: 25px;
-    cursor: pointer;
-    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
   }
   
-  .containerTab {
-    padding: 20px;
-    color: white;
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: aliceblue;
+    color: darkslategray;
   }
   
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: steelblue;
+    color: aliceblue;
   }
   
-  /* Closable button inside the image */
-  .closebtn {
-    float: right;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  .responsive {
+    max-width: 100%;
+    height: auto;
   }
 .socialembed {
     display: inline-flex;
