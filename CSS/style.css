@@ -155,19 +155,11 @@ button {background-color: slategray;}
     max-width: 100%;
     height: auto;
   }
-.socialembed {
+.contact {
+    width:  64px;
+    height: 64px;
+    padding: .1vh 1vw;
+    margin: .1vh 1vw;
     display: inline-flex;
     flex-direction: row-reverse;
-    margin: 1vh 1vw;
-    padding: 1vh 1vw;
-}
-#contactTwitter {
-    width:  64px;
-    height: 64px;
-    padding: auto;
-}
-#contactDiscord {
-    width:  64px;
-    height: 64px;
-    padding: auto;
 }
