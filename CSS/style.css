@@ -5,8 +5,8 @@ body {
 
 header, main, footer {
     width: auto;
-    background-color: darkslategray;
-    outline: .1em solid darkslategray;
+    background-color: darkslateblue;
+    outline: .1em solid darkslateblue;
     margin: 2vh 2vw;
     padding: 2vh 2vw;
 }
@@ -17,13 +17,24 @@ main {
     height: auto;
 }
 footer {
+    text-align: center;
     height: auto;
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
-    color: aliceblue;
+    color: gainsboro;
 }
-button {background-color: slategray;}
+ion-icon {
+    font-size: large;
+    margin: auto;
+    padding: 0 2vw;
+    color: gainsboro;
+
+}
+button {
+    background-color: steelblue;
+    max-width: 100%;
+}
 .topButton {
     display: inline-flex;
     flex-direction: row row-reverse;
@@ -39,6 +50,9 @@ button {background-color: slategray;}
 .topButton:hover {
     background-color:aliceblue;
     outline: .2em solid darkslategray;
+}
+tr {
+    height: auto;
 }
 #moveBox{
     position: relative;
@@ -120,7 +134,7 @@ button {background-color: slategray;}
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: darkslategray;
+    background-color: darkslateblue;
     overflow: hidden;
   }
   
