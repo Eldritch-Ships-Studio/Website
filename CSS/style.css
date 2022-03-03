@@ -35,6 +35,10 @@ button {
     background-color: steelblue;
     max-width: 100%;
 }
+section {
+    display:inline-flex;
+    flex-direction:column;
+}
 .topButton {
     display: inline-flex;
     flex-direction: row row-reverse;
