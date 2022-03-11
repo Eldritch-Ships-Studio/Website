@@ -2,8 +2,8 @@
     "name": "Eldritch Ships Studios",
     "short_name": "Eldritch Ships",
     "start_url": "https://eldritchships.com/",
-    "background_color": "#6a5acd",
-    "theme_color": "#708090",
+    "background_color": "#483d8b",
+    "theme_color": "#6a5acd",
     "display": "standalone",
     "orientation":"portrait",
     "icons": [
@@ -36,6 +36,11 @@
             "sizes": "192x192",
             "type": "image\/png",
             "density": "4.0"
+        },
+        {   "scr": "\/Resources/Logos/Eldritch Ships Studios/eldritchshipslogo512x512.png",
+            "sizes":"512x512",
+            "type":"image\/png",
+            "density":"1.0"
         }
     ]
 
