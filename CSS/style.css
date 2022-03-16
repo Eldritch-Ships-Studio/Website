@@ -22,20 +22,20 @@ footer {
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
-    color: gainsboro;
+    color: LavenderBlush;
 }
 ion-icon {
     font-size: large;
     margin: auto;
     padding: 0 2vw;
-    color: gainsboro;
+    color: LavenderBlush;
 }
 button {
     background-color: steelblue;
     max-width: 100%;
 }
 button:hover {
-    box-shadow: 0 0 .4vh .2vw gainsboro;
+    box-shadow: 0 0 .4vh .2vw LavenderBlush;
 }
 section {
     display:inline-flex;
@@ -52,7 +52,7 @@ section {
   .topnav a {
     float: left;
     display: block;
-    color: gainsboro;
+    color: LavenderBlush;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -61,14 +61,14 @@ section {
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: gainsboro;
+    background-color: LavenderBlush;
     color: darkslategray;
   }
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
     background-color: steelblue;
-    color: gainsboro;
+    color: LavenderBlush;
   }
   
   /* Hide the link that should open and close the topnav on small screens */
@@ -80,10 +80,10 @@ section {
     height: auto;
   }
   .responsive:hover {
-    box-shadow: 0 0 .6vh .3vw gainsboro;
+    box-shadow: 0 0 .6vh .3vw LavenderBlush;
 }
 .colab:hover {
-    box-shadow: 0 0 .4vh .2vw gainsboro;
+    box-shadow: 0 0 .4vh .2vw LavenderBlush;
 }
 .contact {
     width:  64px;
