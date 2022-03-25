@@ -1,24 +1,18 @@
 body {
-    background-color:slateblue;
+    background-color:darkslateblue;
     overflow: auto;
 }
-
 header, main, footer {
     width: auto;
-    background-color: darkslateblue;
-    outline: .1em solid darkslateblue;
+    height: auto;
+    background-color: slateblue;
+    outline: .1em solid slateblue;
     margin: 2vh 2vw;
     padding: 2vh 2vw;
-}
-header {
-    height: auto;
-}
-main {
-    height: auto;
+    border-color: lavenderblush;
 }
 footer {
     text-align: center;
-    height: auto;
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
@@ -30,66 +24,65 @@ ion-icon {
     padding: 0 2vw;
     color: LavenderBlush;
 }
-button {
-    background-color: steelblue;
-    max-width: 100%;
-}
-button:hover {
-    box-shadow: 0 0 .4vh .2vw LavenderBlush;
-}
-section {
-    display:inline-flex;
-    flex-direction:column;
-}
 
-/* Add a black background color to the top navigation */
+/* Add a darkslateblue background color to the top navigation */
 .topnav {
-    background-color: darkslateblue;
+    background-color: slateblue;
     overflow: hidden;
   }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
+/* Style the links inside the navigation bar */
+.topnav a {
     float: left;
     display: block;
     color: LavenderBlush;
     text-align: center;
     padding: 14px 16px;
+    margin: .1em;
     text-decoration: none;
     font-size: 17px;
+    border-radius: 15%;
+    border: .1em;
+    border-color: lavenderblush;
+    text-shadow: 2px 2px 1px darkslateblue;
+  }
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: lightsteelblue;
+    color: darkslateblue;
+    text-shadow: -2px 2px 1px lavenderblush;
   }
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: LavenderBlush;
-    color: darkslategray;
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
+/* Add an active class to highlight the current page */
+.topnav a.active {
     background-color: steelblue;
-    color: LavenderBlush;
+    color: lavenderblush;
+    text-shadow: none;
   }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-    display: none;
-  }
-  .responsive {
+h2 {
+    text-shadow: 2px 2px darkslateblue;
+}
+button {
+    width: auto;
+    text-align: center;
+    background-color: steelblue;
+    max-width: 100%;
+    border-radius: 15%;
+    border-color: lavenderblush;
+}
+button:hover {
+    background-color: lavenderblush;
+}
+button:hover p, button:hover ion-icon {
+    color: darkslateblue;
+}
+section {
+    display:inline-flex;
+    flex-direction:column;
+}
+.responsive {
     max-width: 100%;
     height: auto;
   }
-  .responsive:hover {
-    box-shadow: 0 0 .6vh .3vw LavenderBlush;
-}
-.colab:hover {
-    box-shadow: 0 0 .4vh .2vw LavenderBlush;
-}
-.contact {
-    width:  64px;
-    height: 64px;
-    padding: .1vh 1vw;
-    margin: .1vh 1vw;
-    display: inline-flex;
-    flex-direction: row-reverse;
+.external {
+    text-shadow: 2px 2px darkslateblue;
 }
