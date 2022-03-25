@@ -1,4 +1,3 @@
 # Website
-Portfolio Website
-Hosted with Github Pages
+Portfolio Website hosted with Github Pages. 
 Icons from Ionic Icons https://ionic.io/ionicons
