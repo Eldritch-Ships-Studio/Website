@@ -6,10 +6,11 @@ header, main, footer {
     width: auto;
     height: auto;
     background-color: slateblue;
-    outline: .1em solid slateblue;
-    margin: 2em 2em;
-    padding: 2em 2em;
-    border-color: lavenderblush;
+    margin: 1em;
+    padding: 1em;
+}
+main {
+    min-height: max-content;
 }
 footer {
     text-align: center;
@@ -21,7 +22,7 @@ a, h1, h2, h3, h4, h5, h6, p {
 ion-icon {
     font-size: large;
     margin: auto;
-    padding: 0 2vw;
+    padding: 0 1em;
     color: LavenderBlush;
 }
 
