@@ -7,11 +7,13 @@ body {
     background-color:slateblue;
     overflow: auto;
     margin: 0;
+    border-left: 2em solid darkslateblue;
+    border-right: 2em solid darkslateblue;
 }
 header, main, footer {
     height: 80%;
     background-color: slateblue;
-    
+    text-align: center;
     margin: 1em;
     padding: 1em;
 }
@@ -26,6 +28,7 @@ header {
 }
 main {
     justify-content: center;
+    text-align: left;
 }
 footer {
     margin: auto;
