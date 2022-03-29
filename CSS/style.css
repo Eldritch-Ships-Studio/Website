@@ -4,20 +4,40 @@
     flex-wrap: wrap;
 }
 body {
-    background-color:darkslateblue;
+    background-color:slateblue;
     overflow: auto;
+    margin: 0;
 }
 header, main, footer {
-    height: auto;
+    height: 80%;
     background-color: slateblue;
+    
     margin: 1em;
     padding: 1em;
 }
+header {
+    width: fit-content;
+    border-left: .5em solid darkslateblue;
+    border-right: .5em solid darkslateblue;
+    border-bottom: .5em solid darkslateblue;
+    border-radius: 15%;
+    padding: 1em;
+    margin: 0em 1em 1em 1em;
+}
 main {
-    min-height: max-content;
+    justify-content: center;
 }
 footer {
+    margin: auto;
+    width: fit-content;
     text-align: center;
+    justify-content: center;
+    justify-self: center;
+    background-color: darkslateblue;
+    border-radius: 15%;
+    border-left: .5em solid slateblue;
+    border-right: .5em solid slateblue;
+    border-top: .5em solid slateblue;
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
@@ -44,6 +64,7 @@ ion-icon {
     float: left;
     display: block;
     color: LavenderBlush;
+    background-color: slateblue;
     text-align: center;
     padding: 14px 16px;
     margin: .1em;
@@ -51,7 +72,7 @@ ion-icon {
     font-size: 17px;
     border-radius: 15%;
     border: .1em solid lavenderblush;
-    text-shadow: 2px 2px 1px darkslateblue;
+    text-shadow: 2px 2px 1px slateblue;
   }
 /* Change the color of links on hover */
 .topnav a:hover {
