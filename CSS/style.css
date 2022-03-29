@@ -1,9 +1,13 @@
+* {
+    display: flexbox;
+    flex: 1;
+    flex-wrap: wrap;
+}
 body {
     background-color:darkslateblue;
     overflow: auto;
 }
 header, main, footer {
-    width: auto;
     height: auto;
     background-color: slateblue;
     margin: 1em;
@@ -18,6 +22,10 @@ footer {
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
     color: LavenderBlush;
+}
+img, video {
+    max-width: 100%;
+    height: auto;
 }
 ion-icon {
     font-size: large;
@@ -42,8 +50,7 @@ ion-icon {
     text-decoration: none;
     font-size: 17px;
     border-radius: 15%;
-    border: .1em;
-    border-color: lavenderblush;
+    border: .1em solid lavenderblush;
     text-shadow: 2px 2px 1px darkslateblue;
   }
 /* Change the color of links on hover */
@@ -77,13 +84,9 @@ button:hover p, button:hover ion-icon {
     color: darkslateblue;
 }
 section {
-    display:inline-flex;
+    display:flexbox;
     flex-direction:column;
 }
-.responsive {
-    max-width: 100%;
-    height: auto;
-  }
 .external {
     text-shadow: 2px 2px darkslateblue;
 }
