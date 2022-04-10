@@ -32,7 +32,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
     // Clear the deferredPrompt so it can be garbage collected
     window.deferredPrompt = null;
   });
-  
+
 function myColor() {
 
     // Get the value return by color picker
@@ -46,5 +46,5 @@ function myColor() {
 }
 // When user clicks over color picker,
 // myColor() function is called
-document.getElementById('colorPicker')
-    .addEventListener('input', myColor);
+//document.getElementById('colorPicker')
+//    .addEventListener('input', myColor);
