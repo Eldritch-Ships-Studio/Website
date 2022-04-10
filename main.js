@@ -11,13 +11,13 @@ if ('serviceWorker' in navigator) {
    * The `beforeinstallprompt` event won't fire if the page is served over HTTP.
    * Installability requires a service worker with a fetch event handler, and
    * if the page isn't served over HTTPS, the service worker won't load.
-   */
+   
   if (window.location.protocol === 'http:') {
     const requireHTTPS = document.getElementById('requireHTTPS');
     const link = requireHTTPS.querySelector('a');
     link.href = window.location.href.replace('http://', 'https://');
     requireHTTPS.classList.remove('hidden');
-  }
+  }*/
 
 window.addEventListener('beforeinstallprompt', (event) => {
     // Prevent the mini-infobar from appearing on mobile.
@@ -29,7 +29,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
     divInstall.classList.toggle('hidden', false);
   });
 
-  butInstall.addEventListener('click', async () => {
+  /*butInstall.addEventListener('click', async () => {
     console.log('👍', 'butInstall-clicked');
     const promptEvent = window.deferredPrompt;
     if (!promptEvent) {
@@ -47,7 +47,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
     // Hide the install button.
     divInstall.classList.toggle('hidden', true);
   });
-
+*/
   window.addEventListener('appinstalled', (event) => {
     console.log('👍', 'appinstalled', event);
     // Clear the deferredPrompt so it can be garbage collected
