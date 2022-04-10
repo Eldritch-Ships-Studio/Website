@@ -37,9 +37,9 @@
             "type": "image\/png",
             "density": "4.0"
         },
-        {   "src": "\/Resources/Logos/Eldritch Ships Studios/eldritchshipslogo.svg",
+        {   "src": "\/Resources/Logos/Eldritch Ships Studios/eldritchshipslogo512x512.png",
             "sizes":"512x512",
-            "type":"image/svg+xml",
+            "type":"image\/png",
             "density":"1.0"
         }
     ]
