@@ -40,7 +40,8 @@
         {   "src": "\/Resources/Logos/Eldritch Ships Studios/eldritchshipslogo512x512.png",
             "sizes":"512x512",
             "type":"image\/png",
-            "density":"1.0"
+            "density":"1.0",
+            "purpose": "any maskable"
         }
     ]
 
