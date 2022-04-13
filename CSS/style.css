@@ -1,27 +1,32 @@
+:root {
+    --main-color: slateblue;
+    --main-bg-color: darkslateblue;
+    --text-color: lavenderblush;
+}
 * {
     display: flexbox;
     flex: 1;
     flex-wrap: wrap;
 }
 body {
-    background-color:slateblue;
+    background-color:var(--main-color);
     overflow: auto;
     margin: 0;
-    border-left: 2em solid darkslateblue;
-    border-right: 2em solid darkslateblue;
+    border-left: 2em solid var(--main-bg-color);
+    border-right: 2em solid var(--main-bg-color);
 }
 header, main, footer {
     height: 80%;
-    background-color: slateblue;
+    background-color: var(--main-color);
     text-align: center;
     margin: 1em;
     padding: 1em;
 }
 header {
     width: fit-content;
-    border-left: .5em solid darkslateblue;
-    border-right: .5em solid darkslateblue;
-    border-bottom: .5em solid darkslateblue;
+    border-left: .5em solid var(--main-bg-color);
+    border-right: .5em solid var(--main-bg-color);
+    border-bottom: .5em solid var(--main-bg-color);
     border-radius: 15%;
     padding: 1em;
     margin: 0em 1em 1em 1em;
@@ -36,15 +41,15 @@ footer {
     text-align: center;
     justify-content: center;
     justify-self: center;
-    background-color: darkslateblue;
+    background-color: var(--main-bg-color);
     border-radius: 15%;
-    border-left: .5em solid slateblue;
-    border-right: .5em solid slateblue;
-    border-top: .5em solid slateblue;
+    border-left: .5em solid var(--main-color);
+    border-right: .5em solid var(--main-color);
+    border-top: .5em solid var(--main-color);
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
-    color: LavenderBlush;
+    color: var(--text-color);
 }
 img, video {
     max-width: 100%;
@@ -54,44 +59,44 @@ ion-icon {
     font-size: large;
     margin: auto;
     padding: 0 1em;
-    color: LavenderBlush;
+    color: var(--text-color);
 }
 
-/* Add a darkslateblue background color to the top navigation */
+/* Add a var(--main-bg-color) background color to the top navigation */
 .topnav {
-    background-color: slateblue;
+    background-color: var(--main-color);
     overflow: hidden;
   }
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
     display: block;
-    color: LavenderBlush;
-    background-color: slateblue;
+    color: var(--text-color);
+    background-color: var(--main-color);
     text-align: center;
     padding: 14px 16px;
     margin: .1em;
     text-decoration: none;
     font-size: 17px;
     border-radius: 15%;
-    border: .1em solid lavenderblush;
-    text-shadow: 2px 2px 1px slateblue;
+    border: .1em solid var(--text-color);
+    text-shadow: 2px 2px 1px var(--main-color);
   }
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: lightsteelblue;
-    color: darkslateblue;
-    text-shadow: -2px 2px 1px lavenderblush;
+    color: var(--main-bg-color);
+    text-shadow: -2px 2px 1px var(--text-color);
   }
   
 /* Add an active class to highlight the current page */
 .topnav a.active {
     background-color: steelblue;
-    color: lavenderblush;
+    color: var(--text-color);
     text-shadow: none;
   }
 h2 {
-    text-shadow: 2px 2px darkslateblue;
+    text-shadow: 2px 2px var(--main-bg-color);
 }
 button {
     width: auto;
@@ -99,20 +104,20 @@ button {
     background-color: steelblue;
     max-width: 100%;
     border-radius: 15%;
-    border-color: lavenderblush;
+    border-color: var(--text-color);
 }
 button:hover {
-    background-color: lavenderblush;
+    background-color: var(--text-color);
 }
 button:hover p, button:hover ion-icon {
-    color: darkslateblue;
+    color: var(--main-bg-color);
 }
 section {
     display:flexbox;
     flex-direction:column;
 }
 .external {
-    text-shadow: 2px 2px darkslateblue;
+    text-shadow: 2px 2px var(--main-bg-color);
 }
 
 #colorPicker {
