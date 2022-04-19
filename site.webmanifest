@@ -2,8 +2,8 @@
     "name": "Eldritch Ships Studios",
     "short_name": "Eldritch Ships",
     "start_url": "https://eldritchships.com/",
-    "background_color": "#6a5acd",
-    "theme_color": "#708090",
+    "background_color": "#00bfff",
+    "theme_color": "#87ceeb",
     "display": "standalone",
     "orientation":"portrait",
     "icons": [
