@@ -96,6 +96,9 @@ ion-icon {
     color: var(--text-color);
     text-shadow: none;
   }
+.portrait {
+    style="aspect-ratio: 4/5"
+}
 h2 {
     text-shadow: 2px 2px var(--main-bg-color);
 }
@@ -132,7 +135,7 @@ section {
 
 #box {
     outline: none;
-    border: 2px solid #333;
+    border: 2px solid var(--main-bg-color);
     border-radius: 50px;
     height: 40px;
     width: 120px;
