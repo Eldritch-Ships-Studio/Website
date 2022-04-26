@@ -97,7 +97,7 @@ ion-icon {
     text-shadow: none;
   }
 .portrait {
-    style="aspect-ratio: 4/5"
+    aspect-ratio: 4/5;
 }
 h2 {
     text-shadow: 2px 2px var(--main-bg-color);
