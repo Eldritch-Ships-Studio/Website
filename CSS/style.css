@@ -37,6 +37,7 @@ main {
     text-align: left;
 }
 footer {
+    position: relative;
     margin: auto;
     width: fit-content;
     text-align: center;
@@ -44,13 +45,15 @@ footer {
     justify-self: center;
     background-color: var(--main-bg-color);
     border-radius: 15%;
-    border-left: .5em solid var(--main-color);
-    border-right: .5em solid var(--main-color);
-    border-top: .5em solid var(--main-color);
+    border: .5em solid var(--main-color);
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
     color: var(--text-color);
+    max-width: 50em;
+}
+li {
+    list-style: none;
 }
 img, video {
     max-width: 100%;
@@ -112,13 +115,10 @@ button {
 }
 button:hover {
     background-color: var(--text-color);
+    border-color: var(--main-bg-color);
 }
 button:hover p, button:hover ion-icon {
     color: var(--main-bg-color);
-}
-section {
-    display:flexbox;
-    flex-direction:column;
 }
 .external {
     text-shadow: 2px 2px var(--main-bg-color);
