@@ -104,7 +104,7 @@ const cardArray = [
 ]
 cardArray.sort(() => 0.5 - Math.random());
 const gridDisplay = document.getElementById('memGrid');
-const memResultDisplay = document.getElementById('memResult');
+const memScoreDisplay = document.getElementById('memScore');
 let cardsChosen = [];
 let cardsChosenId = [];
 const cardsWon = [];
@@ -131,7 +131,7 @@ function checkMatch() {
     else {
         if (cardsChosen[0] == cardsChosen[1]) {
             //alert('You\'ve found a match');
-        cards[cardsChosenId[0]].setAttribute('src','./Resources/memory/white.png');
+        cards[cardsChosenId[0]].setAttribute('src','./Resources/memory/white.png'); //todo set opacity to 0
         cards[cardsChosenId[1]].setAttribute('src','./Resources/memory/white.png');
         cards[cardsChosenId[0]].removeEventListener('click', flipCard);
         cards[cardsChosenId[1]].removeEventListener('click', flipCard);
@@ -144,10 +144,10 @@ function checkMatch() {
     }
     cardsChosen = [];
     cardsChosenId = [];
-    memResultDisplay.innerHTML = cardsWon.length;
+    memScoreDisplay.innerHTML = cardsWon.length;
 
     if (cardsWon.length == cards.length/2) {
-        memResultDisplay.innerHTML = 'You\'re a winner';
+        memScoreDisplay.innerHTML = 'You\'re a winner';
 
     }
 }
@@ -161,3 +161,52 @@ function flipCard() {
         setTimeout((checkMatch),500);
     }
 }
+
+//Whack a Mole
+const holes = document.querySelectorAll('.moleHole');
+const mole = document.querySelector('.mole');
+const moleTimeDisplay = document.querySelector('#moleTime');
+const moleScoreDisplay = document.querySelector('#moleScore');
+
+let moleScore = 0;
+let moleTarget = 0;
+let moleTime = 60;
+let moleCountDownTimer = null;
+let moleMoveTimer = null;
+
+function randomHole() {
+    holes.forEach(hole => {
+        hole.classList.remove('mole');
+    })
+
+    let randomHole = holes[Math.floor(Math.random() * 9)];
+    randomHole.classList.add('mole');
+
+    moleTarget = randomHole.id;
+}
+holes.forEach(hole => {
+    hole.addEventListener('mousedown', () => {
+        if (hole.id == moleTarget) {
+            moleScore++;
+            //hole.style.border = '' todo set border normal
+            moleScoreDisplay.innerHTML = moleScore;
+            moleTarget = null;
+        }
+    })
+})
+function startMole() {
+    moleMoveTimer = setInterval(randomHole, 700);
+    moleCountDownTimer = setInterval(moleCountDown, 1000);
+}
+function moleCountDown() {
+    moleTime--;
+    moleTimeDisplay.innerHTML = moleTime;
+    if (moleTime == 0) {
+        clearInterval(moleCountDownTimer);
+        clearInterval(moleMoveTimer);
+    }
+}
+const moleGo = document.getElementById('moleStart');
+moleGo.addEventListener('click', async () => {
+    startMole();
+});

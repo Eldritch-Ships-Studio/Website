@@ -106,6 +106,9 @@ ion-icon {
 h2 {
     text-shadow: 2px 2px var(--main-bg-color);
 }
+h3 {
+    display: inline;
+}
 button {
     width: auto;
     text-align: center;
@@ -126,15 +129,35 @@ button:hover p, button:hover ion-icon, button:hover {
 }
 /*Memory Game*/
 #memGrid {
-    width: 400px;
-    height: 300px;
-    display:inline;
-    overflow: auto;
+    width: 30em;
+    height: 30em;
+    display:inline-flex;
+    margin-bottom: 10em;
 }
 .memCard {
+    width: 9em;
+    height: 9em;
     margin: .15em;
 }
-
+/*Mole Game*/
+#moleGrid {
+    width: 30em;
+    height: 30em;
+    display: flexbox;
+    flex-wrap: wrap;
+}
+.moleHole {
+    width: 9em;
+    height: 9em;
+    border: .35em solid var(--main-bg-color);
+    display: inline-flex;
+    max-width: 100%;
+}
+.mole {
+    background-image: url(../Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg);
+    background-size: cover;
+    border: .35em solid var(--button-color);
+}
 /*Color picker tool*/
 #colorPicker {
     background-color: none;

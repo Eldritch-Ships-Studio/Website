@@ -23,16 +23,39 @@
     </header>
 <main>
     <h1>Rock Paper Scissors</h1>
-    <h2>User Choice: <span id="user-choice"></span></h2>
-    <button class="rpsButton" id="rock">Rock</button>
-    <button class="rpsButton" id="paper">Paper</button>
-    <button class="rpsButton" id="scissors">Scissors</button>
-    <h2>Computer Choice: <span id="computer-choice"></span></h2>
-    <h2>Result: <span id="rpsResult"></span></h2>
+    <div class="javascriptGame" id="rpsGame">
+        <h2>Your Choice: <span id="user-choice"></span></h2>
+        <button class="rpsButton" id="rock">Rock</button>
+        <button class="rpsButton" id="paper">Paper</button>
+        <button class="rpsButton" id="scissors">Scissors</button>
+        <h2>Computer Choice: <span id="computer-choice"></span></h2> <!--todo hard mode toggle, computer always wins-->
+        <h3>Result: <span id="rpsResult"></span></h3>
+    </div>
 
     <h1>Memory</h1>
-    <h3>Score: <span id="memResult">0</span></h3>
-    <div id="memGrid"></div>
+    <div class="javascriptGame" id="memGame">
+        <h3 style="display: block;">Score: <span id="memScore">0</span></h3>
+        <div id="memGrid"></div> <!--todo different tilesets-->
+    </div>
+
+    <h1>Whac a Mole</h1>
+    <div class="javascriptGame" id="moleGame">
+        <button id="moleStart">Start</button>
+        <h3>Score: <span id="moleScore">0</span></h3>
+        <h3>Time Remaining: <span id="moleTime">60</span></h3>
+
+        <div class="moleGrid">
+            <div class="moleHole" id="moleHole1"></div>
+            <div class="moleHole" id="moleHole2"></div>
+            <div class="moleHole" id="moleHole3"></div>
+            <div class="moleHole" id="moleHole4"></div>
+            <div class="moleHole" id="moleHole5"></div>
+            <div class="moleHole" id="moleHole6"></div>
+            <div class="moleHole" id="moleHole7"></div>
+            <div class="moleHole" id="moleHole8"></div>
+            <div class="moleHole" id="moleHole9"></div>
+        </div>
+    </div>
 
 </main>
 <footer>
