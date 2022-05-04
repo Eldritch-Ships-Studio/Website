@@ -17,22 +17,23 @@
 <body>
     <header class="topnav" id="myTopnav">
         <a href="./index.html">Home</a>
-        <a href="./games.html">Games</a>
+        <a href="./games.html" class="active">Games</a>
         <a href="./library.html">Library</a>
-        <a href="./tools.html" class="active">Tools</a>
+        <a href="./tools.html">Tools</a>
     </header>
 <main>
-    <h1>Color Picker</h1>
-	<div>
-		<!-- To select the color -->
-		Color Picker: <input type="color"
-			id="colorPicker" value="#6a5acd">
+    <h1>Rock Paper Scissors</h1>
+    <h2>User Choice: <span id="user-choice"></span></h2>
+    <button class="rpsButton" id="rock">Rock</button>
+    <button class="rpsButton" id="paper">Paper</button>
+    <button class="rpsButton" id="scissors">Scissors</button>
+    <h2>Computer Choice: <span id="computer-choice"></span></h2>
+    <h2>Result: <span id="rpsResult"></span></h2>
 
-		<!-- To display hex code of the color -->
-		Hex Code: <input type="text" id="box">
-	</div>
-    <h1>Heredibility</h1>
-    <h1>Conversion</h1>
+    <h1>Memory</h1>
+    <h3>Score: <span id="memResult"></span></h3>
+    <div id="memGrid"></div>
+
 </main>
 <footer>
     <h2> <b>Eldritch Ships Studios</b> </h2>
@@ -43,6 +44,7 @@
         <a href="https://github.com/Eldritch-Ships-Studios" target="_blank" rel="noopener" title="Github"><ion-icon name="logo-github"></ion-icon></a>
     </h3>
 </footer>
+<script src="./games.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

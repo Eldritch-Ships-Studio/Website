@@ -117,13 +117,24 @@ button:hover {
     background-color: var(--text-color);
     border-color: var(--main-bg-color);
 }
-button:hover p, button:hover ion-icon {
+button:hover p, button:hover ion-icon, button:hover {
     color: var(--main-bg-color);
 }
 .external {
     text-shadow: 2px 2px var(--main-bg-color);
 }
+/*Memory Game*/
+#memGrid {
+    width: 400px;
+    height: 300px;
+    display:inline;
+    overflow: auto;
+}
+.memCard {
+    margin: .15em;
+}
 
+/*Color picker tool*/
 #colorPicker {
     background-color: none;
     outline: none;
