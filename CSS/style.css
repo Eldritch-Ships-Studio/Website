@@ -15,6 +15,7 @@ body {
     margin: 0;
     border-left: 2em solid var(--main-bg-color);
     border-right: 2em solid var(--main-bg-color);
+    /*cursor: url(https://www.eldritchships.com/Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg), auto;*/
 }
 header, main, footer {
     height: 80%;
