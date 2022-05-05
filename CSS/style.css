@@ -4,17 +4,18 @@
     --text-color: midnightblue;
     --button-color: aquamarine;
 }
-* {
+/* {
     display: flexbox;
-    flex: 1;
+    flex: 0 1 auto;
     flex-wrap: wrap;
-}
+    flex-direction: row;
+    justify-content: space-around;
+}*/
 body {
     background-color:var(--main-color);
-    overflow: auto;
-    margin: 0;
-    border-left: 2em solid var(--main-bg-color);
-    border-right: 2em solid var(--main-bg-color);
+    border-left: 1em solid var(--text-color);
+    border-right: 1em solid var(--text-color);
+    margin: 0px;
     /*cursor: url(https://www.eldritchships.com/Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg), auto;*/
 }
 header, main, footer {
@@ -25,13 +26,17 @@ header, main, footer {
     padding: 1em;
 }
 header {
-    width: fit-content;
-    border-left: .5em solid var(--main-bg-color);
-    border-right: .5em solid var(--main-bg-color);
-    border-bottom: .5em solid var(--main-bg-color);
-    border-radius: 15%;
-    padding: 1em;
-    margin: 0em 1em 1em 1em;
+    /*border-left: .5em solid var(--text-color);
+    border-right: .5em solid var(--text-color);
+    border-top: .5em solid var(--text-color);
+    border-radius: 15%;*/
+    width: 85%;
+    margin: 0em .2em;
+    padding: 0em .25em;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+
 }
 main {
     justify-content: center;
@@ -41,12 +46,15 @@ footer {
     position: relative;
     margin: auto;
     width: fit-content;
+    height: 15%;
     text-align: center;
     justify-content: center;
     justify-self: center;
     background-color: var(--main-bg-color);
+    border-left: .5em solid var(--text-color);
+    border-right: .5em solid var(--text-color);
+    border-top: .5em solid var(--text-color);
     border-radius: 15%;
-    border: .5em solid var(--main-color);
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
@@ -69,8 +77,16 @@ ion-icon {
 
 /* Add a var(--main-bg-color) background color to the top navigation */
 .topnav {
-    background-color: var(--main-color);
+    background-color: var(--main-bg-color);
+    justify-content: space-around;
     overflow: hidden;
+    width: fit-content;
+    border-left: .5em solid var(--text-color);
+    border-right: .5em solid var(--text-color);
+    border-bottom: .5em solid var(--text-color);
+    border-radius: 15%;
+    padding: 1em;
+    margin: 0em .1em .1em .1em;
   }
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -79,13 +95,14 @@ ion-icon {
     color: var(--text-color);
     background-color: var(--main-color);
     text-align: center;
-    padding: 14px 16px;
+    padding: 0em .2em;
     margin: .1em;
     text-decoration: none;
-    font-size: 17px;
+    /*font-size: 17px;*/
     border-radius: 15%;
     border: .1em solid var(--text-color);
     text-shadow: 2px 2px 1px var(--main-color);
+    width: 5em;
   }
 /* Change the color of links on hover */
 .topnav a:hover {
@@ -110,7 +127,8 @@ h3 {
     display: inline;
 }
 button {
-    width: auto;
+    width: 7em;
+    aspect-ratio: 1.618/1;
     text-align: center;
     background-color: var(--button-color);
     max-width: 100%;
@@ -131,13 +149,15 @@ button:hover p, button:hover ion-icon, button:hover {
 #memGrid {
     width: 30em;
     height: 30em;
-    display:inline-flex;
+    display: flexbox;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-bottom: 10em;
 }
 .memCard {
     width: 9em;
     height: 9em;
     margin: .15em;
+    display: inline-flex;
 }
 /*Mole Game*/
 #moleGrid {
@@ -145,19 +165,32 @@ button:hover p, button:hover ion-icon, button:hover {
     height: 30em;
     display: flexbox;
     flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .moleHole {
     width: 9em;
     height: 9em;
     border: .35em solid var(--main-bg-color);
     display: inline-flex;
-    max-width: 100%;
+    color: var(--main-bg-color);
 }
 .mole {
     background-image: url(../Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg);
     background-size: cover;
     border: .35em solid var(--button-color);
 }
+/*Breakout Game*/
+#breakGrid {
+    width: 600px;
+    height: 300px;
+    border: .35em solid var(--main-bg-color);
+}
+.breakBlock {
+    width: 100px;
+    height: 20px;
+    background-color: var(--button-color);
+}
+
 /*Color picker tool*/
 #colorPicker {
     background-color: none;

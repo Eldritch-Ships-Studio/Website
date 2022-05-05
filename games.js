@@ -167,6 +167,7 @@ const holes = document.querySelectorAll('.moleHole');
 const mole = document.querySelector('.mole');
 const moleTimeDisplay = document.querySelector('#moleTime');
 const moleScoreDisplay = document.querySelector('#moleScore');
+let moleStarted = false;
 
 let moleScore = 0;
 let moleTarget = 0;
@@ -201,12 +202,16 @@ function startMole() {
 function moleCountDown() {
     moleTime--;
     moleTimeDisplay.innerHTML = moleTime;
-    if (moleTime == 0) {
+    if (moleTime <= 0) {
         clearInterval(moleCountDownTimer);
         clearInterval(moleMoveTimer);
     }
 }
-const moleGo = document.getElementById('moleStart');
-moleGo.addEventListener('click', async () => {
-    startMole();
+document.getElementById('moleStart').addEventListener('click', async () => { //start button
+    if (!moleStarted) {
+        startMole();
+        moleStarted = true;
+    }
 });
+
+//Breakout
