@@ -1,16 +1,17 @@
 :root {
-    --main-color: skyblue;
-    --main-bg-color: deepskyblue;
+    --main-color: cornflowerblue;
+    --main-bg-color: midnightblue;
+    --main-accent-color: deepskyblue;
     --text-color: midnightblue;
-    --button-color: aquamarine;
+    --button-color: powderblue;
 }
-/* {
+ *{
     display: flexbox;
     flex: 0 1 auto;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-}*/
+}
 body {
     background-color:var(--main-color);
     border-left: 1em solid var(--text-color);
@@ -50,7 +51,7 @@ footer {
     text-align: center;
     justify-content: center;
     justify-self: center;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-accent-color);
     border-left: .5em solid var(--text-color);
     border-right: .5em solid var(--text-color);
     border-top: .5em solid var(--text-color);
@@ -77,7 +78,7 @@ ion-icon {
 
 /* Add a var(--main-bg-color) background color to the top navigation */
 .topnav {
-    background-color: var(--main-bg-color);
+    background-color: var(--main-accent-color);
     justify-content: space-around;
     overflow: hidden;
     width: fit-content;
@@ -101,12 +102,13 @@ ion-icon {
     /*font-size: 17px;*/
     border-radius: 15%;
     border: .1em solid var(--text-color);
-    text-shadow: 2px 2px 1px var(--main-color);
+    /*text-shadow: 2px 2px 1px var(--main-color);*/
     width: 5em;
+    min-width: fit-content;
   }
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: lightsteelblue;
+    background-color: var(--main-accent-color);
     /*color: var(--main-bg-color);*/
     /*text-shadow: -2px 2px 1px var(--text-color);*/
   }
@@ -115,13 +117,13 @@ ion-icon {
 .topnav a.active {
     background-color: var(--button-color);
     color: var(--text-color);
-    text-shadow: none;
+    /*text-shadow: none;*/
   }
 .portrait {
     aspect-ratio: 4/5;
 }
 h2 {
-    text-shadow: 2px 2px var(--main-bg-color);
+    /*text-shadow: 2px 2px var(--main-accent-color);*/
 }
 h3 {
     display: inline;
@@ -140,11 +142,11 @@ button:hover {
     border-color: var(--main-bg-color);
 }
 button:hover p, button:hover ion-icon, button:hover {
-    color: var(--main-bg-color);
+    color: var(--button-color);
 }
-.external {
-    text-shadow: 2px 2px var(--main-bg-color);
-}
+/*.external {
+    text-shadow: 2px 2px var(--main-accent-color);
+}*/
 /*Memory Game*/
 #memGrid {
     width: 30em;
@@ -158,6 +160,9 @@ button:hover p, button:hover ion-icon, button:hover {
     height: 9em;
     margin: .15em;
     display: inline-flex;
+    /*border: .15em solid var(--main-bg-color);*/
+
+
 }
 /*Mole Game*/
 #moleGrid {
