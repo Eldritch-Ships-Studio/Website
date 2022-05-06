@@ -101,7 +101,7 @@ ion-icon {
     text-decoration: none;
     /*font-size: 17px;*/
     border-radius: 15%;
-    border: .1em solid var(--text-color);
+    border: .2em solid var(--text-color);
     /*text-shadow: 2px 2px 1px var(--main-color);*/
     width: 5em;
     min-width: fit-content;
@@ -122,9 +122,9 @@ ion-icon {
 .portrait {
     aspect-ratio: 4/5;
 }
-h2 {
-    /*text-shadow: 2px 2px var(--main-accent-color);*/
-}
+/*h2 {
+    text-shadow: 2px 2px var(--main-accent-color);
+}*/
 h3 {
     display: inline;
 }
@@ -136,6 +136,7 @@ button {
     max-width: 100%;
     border-radius: 15%;
     border-color: var(--text-color);
+    margin: .1em;
 }
 button:hover {
     background-color: var(--text-color);
@@ -150,16 +151,16 @@ button:hover p, button:hover ion-icon, button:hover {
 /*Memory Game*/
 #memGrid {
     width: 30em;
-    height: 30em;
+    height: 40em;
     display: flexbox;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-bottom: 10em;
+    /*margin-bottom: 10em;*/
 }
 .memCard {
     width: 9em;
     height: 9em;
     margin: .15em;
-    display: inline-flex;
+    display: flexbox;
     /*border: .15em solid var(--main-bg-color);*/
 
 
@@ -169,12 +170,15 @@ button:hover p, button:hover ion-icon, button:hover {
     width: 30em;
     height: 30em;
     display: flexbox;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /*flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
 }
 .moleHole {
     width: 9em;
     height: 9em;
+    /*max-width: 20%;
+    max-height: 20%;
+    aspect-ratio: 1/1;*/
     border: .35em solid var(--main-bg-color);
     display: inline-flex;
     color: var(--main-bg-color);
@@ -193,7 +197,8 @@ button:hover p, button:hover ion-icon, button:hover {
 .breakBlock {
     width: 100px;
     height: 20px;
-    background-color: var(--button-color);
+    margin: 2px;
+    background-color: var(--main-accent-color);
 }
 
 /*Color picker tool*/

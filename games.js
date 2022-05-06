@@ -131,8 +131,10 @@ function checkMatch() {
     else {
         if (cardsChosen[0] == cardsChosen[1]) {
             //alert('You\'ve found a match');
-        cards[cardsChosenId[0]].setAttribute('src','./Resources/memory/white.png'); //todo set opacity to 0
-        cards[cardsChosenId[1]].setAttribute('src','./Resources/memory/white.png');
+        //cards[cardsChosenId[0]].setAttribute('src','./Resources/memory/white.png'); //changes to cleared image
+        //cards[cardsChosenId[1]].setAttribute('src','./Resources/memory/white.png');
+        cards[cardsChosenId[0]].style.opacity = '0.0';
+        cards[cardsChosenId[1]].style.opacity = '0.0';
         cards[cardsChosenId[0]].removeEventListener('click', flipCard);
         cards[cardsChosenId[1]].removeEventListener('click', flipCard);
         cardsWon.push(cardsChosen);
@@ -215,3 +217,31 @@ document.getElementById('moleStart').addEventListener('click', async () => { //s
 });
 
 //Breakout
+const breakGrid = document.querySelector('#breakGrid');
+const breakBlockWidth = 100;
+const breakBlockHeight = 20;
+
+class BreakBlock {
+    constructor(xAxis, yAxis) {
+        this.bottomLeft = (xAxis, yAxis);
+        this.bottomRight = (xAxis + breakBlockWidth, yAxis);
+        this.topLeft = (xAxis, yAxis + breakBlockHeight);
+        this.topRight = (xAxis + breakBlockWidth, yAxis + breakBlockHeight);
+    }
+}
+const breakBlocks = [
+    new BreakBlock(10,270)
+];
+console.log(breakBlocks);
+function addBlocks() {
+    for (let i = 0; i < breakBlocks.length; i++) {
+        const breakBlock = document.createElement('div');
+        breakBlock.classList.add('breakBlock');
+        breakBlock.style.left = breakBlocks[0].bottomLeft + 'px';
+        breakBlock.style.bottom = breakBlocks[i] + 'px';
+        breakGrid.appendChild(breakBlock);  
+    }
+}
+addBlocks();
+addBlocks();
+console.log(breakBlocks);
