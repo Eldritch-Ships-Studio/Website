@@ -16,13 +16,13 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 function generateComputerChoice() {
     const randomNumber = Math.floor(Math.random() * possibleChoices.length);
     if (randomNumber === 0) {
-        computerChoice = 'rock'
+        computerChoice = 'Rock'
     }
     if (randomNumber === 1) {
-        computerChoice = 'paper'
+        computerChoice = 'Paper'
     }
     if (randomNumber === 2) {
-        computerChoice = 'scissors'
+        computerChoice = 'Scissors'
     }
     computerChoiceDisplay.innerHTML = computerChoice
 }
@@ -31,22 +31,22 @@ function getResult() {
     if (computerChoice === userChoice) {
         result = 'You\'ve drawn'
       }
-      if (computerChoice === 'rock' && userChoice === "paper") {
+      if (computerChoice === 'Rock' && userChoice === "Paper") {
         result = 'You\'ve won'
       }
-      if (computerChoice === 'rock' && userChoice === "scissors") {
+      if (computerChoice === 'Rock' && userChoice === "Scissors") {
         result = 'You\'ve lost'
       }
-      if (computerChoice === 'paper' && userChoice === "scissors") {
+      if (computerChoice === 'Paper' && userChoice === "Scissors") {
         result = 'You\'ve won'
       }
-      if (computerChoice === 'paper' && userChoice === "rock") {
+      if (computerChoice === 'Paper' && userChoice === "Rock") {
         result = 'You\'ve lost'
       }
-      if (computerChoice === 'scissors' && userChoice === "rock") {
+      if (computerChoice === 'Scissors' && userChoice === "Rock") {
         result = 'You\'ve won'
       }
-      if (computerChoice === 'scissors' && userChoice === "paper") {
+      if (computerChoice === 'Scissors' && userChoice === "Paper") {
         result = 'You\'ve lost'
       }
       rpsResultDisplay.innerHTML = result
