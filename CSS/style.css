@@ -14,12 +14,11 @@
 }
 body {
     background-color:var(--main-color);
-    border-left: 1em solid var(--text-color);
-    border-right: 1em solid var(--text-color);
     margin: 0px;
     /*cursor: url(https://www.eldritchships.com/Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg), auto;*/
 }
 header, main, footer {
+    width: 80%;
     height: 80%;
     background-color: var(--main-color);
     text-align: center;
@@ -27,13 +26,15 @@ header, main, footer {
     padding: 1em;
 }
 header {
-    /*border-left: .5em solid var(--text-color);
+    /*min-height: 100vh;
+    border-left: .5em solid var(--text-color);
     border-right: .5em solid var(--text-color);
     border-top: .5em solid var(--text-color);
     border-radius: 15%;*/
     width: 85%;
     margin: 0em .2em;
     padding: 0em .25em;
+    align-items: center;
     text-align: center;
     justify-content: center;
     justify-self: center;
@@ -42,12 +43,13 @@ header {
 main {
     justify-content: center;
     text-align: left;
+    margin-left: 1em;
 }
 footer {
     position: relative;
     margin: auto;
     width: fit-content;
-    height: 15%;
+    height: 10%;
     text-align: center;
     justify-content: center;
     justify-self: center;
@@ -60,27 +62,31 @@ footer {
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
     color: var(--text-color);
-    max-width: 50em;
+    /*max-width: 50em;*/
 }
 li {
     list-style: none;
+    align-items: center;
 }
 img, video {
     max-width: 100%;
     height: auto;
 }
 ion-icon {
-    font-size: large;
     margin: auto;
-    padding: 0 1em;
+    padding: 0 .3em;
     color: var(--text-color);
+    font-size: 32px;
 }
-
+nav ion-icon {
+    position: relative;
+}
 /* Add a var(--main-bg-color) background color to the top navigation */
 .topnav {
+    display: flex;
+    position: relative;
     background-color: var(--main-accent-color);
     justify-content: space-around;
-    overflow: hidden;
     width: fit-content;
     border-left: .5em solid var(--text-color);
     border-right: .5em solid var(--text-color);
@@ -90,9 +96,8 @@ ion-icon {
     margin: 0em .1em .1em .1em;
   }
 /* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
+.topnav a{
+    display: inline;
     color: var(--text-color);
     background-color: var(--main-color);
     text-align: center;
@@ -119,6 +124,7 @@ ion-icon {
     color: var(--text-color);
     /*text-shadow: none;*/
   }
+  
 .portrait {
     aspect-ratio: 4/5;
 }
@@ -148,22 +154,39 @@ button:hover p, button:hover ion-icon, button:hover {
 /*.external {
     text-shadow: 2px 2px var(--main-accent-color);
 }*/
+ul {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+li {
+    margin-bottom: .5em;
+    border-bottom: .5em dashed var(--text-color);
+}
+/*
+.left {
+    position: relative;
+    border-left: .5em solid var(--text-color);
+}
+.right {
+    border-left: .5em solid var(--text-color);
+}*/
 /*Memory Game*/
 #memGrid {
-    width: 30em;
-    height: 40em;
-    display: flexbox;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /*margin-bottom: 10em;*/
+    width: 27em;
+    /*height: 40em;*/
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 .memCard {
-    width: 9em;
-    height: 9em;
-    margin: .15em;
-    display: flexbox;
-    /*border: .15em solid var(--main-bg-color);*/
-
-
+    width: 8em;
+    height: 8em;
+    margin: 0;
+    border: .5em solid var(--main-bg-color);
+    justify-content:space-between;
 }
 /*Mole Game*/
 #moleGrid {
@@ -174,8 +197,8 @@ button:hover p, button:hover ion-icon, button:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
 }
 .moleHole {
-    width: 9em;
-    height: 9em;
+    width: 8em;
+    height: 8em;
     /*max-width: 20%;
     max-height: 20%;
     aspect-ratio: 1/1;*/

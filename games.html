@@ -17,36 +17,54 @@
 <body>
     <header>
         <nav class="topnav" id="myTopnav">
-        <a href="./index.html"><h2>Home</h2></a>
-        <a href="./games.html" class="active"><h2>Games</h2></a>
-        <a href="./library.html"><h2>Library</h2></a>
+        <a href="./index.html"><ion-icon name="home-outline"></ion-icon><h2>Home</h2></a>
+        <a href="./games.html" class="active"><ion-icon name="game-controller-outline"></ion-icon><h2>Games</h2></a>
+        <a href="./library.html"><ion-icon name="easel-outline"></ion-icon><h2>Library</h2></a>
         <!--<a href="./tools.html"><h2>Tools</h2></a>-->
         </nav>
     </header>
 <main>
-    <h1>Rock Paper Scissors</h1>
+    <ul>
+    <li>
+    <div>
+    <h1>Rock, Paper, Scissors</h1>
+    <p><b>Rules:</b> Choose either; Rock, Paper, or Scissors and test your luck aginst a computer also choosing Rock, Paper, or Scissors. Paper beats Rock. Rock beats Scissors. Scissors beats Paper.</p>
+    <h3>Score: <span id="rpsResult"></span></h3>    
+    </div>
+    </li>
+    <li>
     <div class="javascriptGame" id="rpsGame">
         <h2>Your Choice: <span id="user-choice"></span></h2>
         <button class="rpsButton" id="Rock">Rock</button>
         <button class="rpsButton" id="Paper">Paper</button>
         <button class="rpsButton" id="Scissors">Scissors</button>
         <h2>Computer Choice: <span id="computer-choice"></span></h2> <!--todo hard mode toggle, computer always wins-->
-        <h3>Result: <span id="rpsResult"></span></h3>
+        
     </div>
-
+    </li>
+    <li>
     <h1>Memory</h1>
+    <p><b>Rules:</b> Choose a tile and click to flip it over, revealing it's hidden secrets underneath. If you reveal 2 matching tiles, you score. Match them all to win.</p>
+    <h3 style="display: block;">Score: <span id="memScore">0</span></h3>
+    </li>
+    <li>
     <div class="javascriptGame" id="memGame">
-        <h3 style="display: block;">Score: <span id="memScore">0</span></h3>
+        
         <div id="memGrid"></div> <!--todo different tilesets-->
     </div>
-
-    <h1>Whac a Mole</h1>
-    <div class="javascriptGame" id="moleGame">
+    </li>
+    <li>
+        <h1>Whac a Mole</h1>
+        <p><b>Rules:</b> Start the mole with the start button. The mole will pop up in one of the nine holes. Click to whack that mole and score before time runs out.</p>
         <button id="moleStart">Start</button>
-        <h3>Score: <span id="moleScore">0</span></h3>
-        <h3>Time Remaining: <span id="moleTime">60</span></h3>
+            <h3>Score: <span id="moleScore">0</span></h3>
+            <h3>Time Remaining: <span id="moleTime">60</span></h3>
+        </li>
+        <li>
+        <div class="javascriptGame" id="moleGame">
 
-        <div id="moleGrid">
+
+            <div id="moleGrid">
             <div class="moleHole" id="moleHole1"></div>
             <div class="moleHole" id="moleHole2"></div>
             <div class="moleHole" id="moleHole3"></div>
@@ -56,14 +74,16 @@
             <div class="moleHole" id="moleHole7"></div>
             <div class="moleHole" id="moleHole8"></div>
             <div class="moleHole" id="moleHole9"></div>
+            </div>
         </div>
-    </div>
-
-    <h1>Breakout</h1>
-    <div class="javascriptGame" id="breakGame">
+    </li>
+    <li>
+        <h1>Breakout</h1>
+        <div class="javascriptGame" id="breakGame">
         <div id="breakGrid"></div>
-    </div>
-
+        </div>
+    </li>
+    </ul>
 </main>
 <footer>
     <h2> <b>Eldritch Ships Studios</b> </h2>
