@@ -11,6 +11,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
 }
 body {
     background-color:var(--main-color);
@@ -41,9 +43,7 @@ header {
 
 }
 main {
-    justify-content: center;
     text-align: left;
-    margin-left: 1em;
 }
 footer {
     position: relative;
@@ -155,14 +155,28 @@ button:hover p, button:hover ion-icon, button:hover {
     text-shadow: 2px 2px var(--main-accent-color);
 }*/
 ul {
-    margin: 1em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    overflow: hidden;
 }
+@media only screen and (max-width: 1100px) {
+    /* For mobile phones: */
+    ul {
+        grid-template-columns: repeat(auto-fit, minmax(75%, 1fr));
+    }
+    #memGrid {
+        max-width: 100%;
+        aspect-ratio: 4/3;
+    }
+    #moleGrid {
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
 
 li {
     margin-bottom: .5em;
-    border-bottom: .5em dashed var(--text-color);
+    border-bottom: .5em solid var(--text-color);
 }
 /*
 .left {
@@ -191,8 +205,9 @@ li {
 /*Mole Game*/
 #moleGrid {
     width: 30em;
-    height: 30em;
+    /*height: 30em;*/
     display: flexbox;
+    aspect-ratio: 1/1;
     /*flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
 }
