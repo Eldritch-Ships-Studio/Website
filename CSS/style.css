@@ -176,7 +176,7 @@ ul {
 
 li {
     margin-bottom: .5em;
-    border-bottom: .5em solid var(--text-color);
+    /*border-bottom: .5em solid var(--text-color);*/
 }
 /*
 .left {
@@ -186,6 +186,13 @@ li {
 .right {
     border-left: .5em solid var(--text-color);
 }*/
+.javascriptGameInstrctions {
+    min-height: 10em;
+}
+.javascriptGame {
+    min-height: 20em;
+    /*background-color: var(--main-accent-color);*/
+}
 /*Memory Game*/
 #memGrid {
     width: 27em;
@@ -228,6 +235,7 @@ li {
 }
 /*Breakout Game*/
 #breakGrid {
+    position: absolute;
     width: 600px;
     height: 300px;
     border: .35em solid var(--main-bg-color);
@@ -237,8 +245,22 @@ li {
     height: 20px;
     margin: 2px;
     background-color: var(--main-accent-color);
+    position: absolute;
+    display: block;
 }
-
+.breakUser {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: var(--button-color);
+  }
+  .breakBall {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--text-color);
+  }
 /*Color picker tool*/
 #colorPicker {
     background-color: none;

@@ -25,15 +25,15 @@
     </header>
 <main>
     <ul>
-    <li>
+    <li class="javascriptGameInstrctions">
     <div>
     <h1>Rock, Paper, Scissors</h1>
     <p><b>Rules:</b> Choose either; Rock, Paper, or Scissors and test your luck aginst a computer also choosing Rock, Paper, or Scissors. Paper beats Rock. Rock beats Scissors. Scissors beats Paper.</p>
     <h3>Score: <span id="rpsResult"></span></h3>    
     </div>
     </li>
-    <li>
-    <div class="javascriptGame" id="rpsGame">
+    <li class="javascriptGame">
+    <div id="rpsGame">
         <h2>Your Choice: <span id="user-choice"></span></h2>
         <button class="rpsButton" id="Rock">Rock</button>
         <button class="rpsButton" id="Paper">Paper</button>
@@ -42,26 +42,26 @@
         
     </div>
     </li>
-    <li>
+    <li class="javascriptGameInstrctions">
     <h1>Memory</h1>
     <p><b>Rules:</b> Choose a tile and click to flip it over, revealing it's hidden secrets underneath. If you reveal 2 matching tiles, you score. Match them all to win.</p>
     <h3 style="display: block;">Score: <span id="memScore">0</span></h3>
     </li>
-    <li>
-    <div class="javascriptGame" id="memGame">
+    <li class="javascriptGame">
+    <div id="memGame">
         
         <div id="memGrid"></div> <!--todo different tilesets-->
     </div>
     </li>
-    <li>
+    <li class="javascriptGameInstrctions">
         <h1>Whac a Mole</h1>
         <p><b>Rules:</b> Start the mole with the start button. The mole will pop up in one of the nine holes. Click to whack that mole and score before time runs out.</p>
         <button id="moleStart">Start</button>
             <h3>Score: <span id="moleScore">0</span></h3>
             <h3>Time Remaining: <span id="moleTime">60</span></h3>
         </li>
-        <li>
-        <div class="javascriptGame" id="moleGame">
+        <li class="javascriptGame" >
+        <divid="moleGame">
 
 
             <div id="moleGrid">
@@ -77,9 +77,15 @@
             </div>
         </div>
     </li>
-    <li>
+    <li class="javascriptGameInstrctions">
         <h1>Breakout</h1>
-        <div class="javascriptGame" id="breakGame">
+        <p><b>Rules:</b> Start the ball with the start button. The ball will remove a brick and score on contact. Move your bar left and right with the arrow keys. Don't let the ball fall down. Clear all 15 blocks to win.</p>
+        <p>Not available on mobile controls at the moment</p>
+        <button id="breakStart">Start</button>
+        <h3>Score: <span id="breakScore"></span></h3>
+    </li>
+    <li class="javascriptGame">
+        <div id="breakGame">
         <div id="breakGrid"></div>
         </div>
     </li>

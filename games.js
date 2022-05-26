@@ -218,30 +218,183 @@ document.getElementById('moleStart').addEventListener('click', async () => { //s
 
 //Breakout
 const breakGrid = document.querySelector('#breakGrid');
+const scoreDisplay = document.querySelector('#breakScore')
 const breakBlockWidth = 100;
 const breakBlockHeight = 20;
+const breakBallDiameter = 20
+const breakBoardWidth = 600
+const breakBoardHeight = 300
+let xDirection = -2
+let yDirection = 2
+let breakStarted = false;
 
+const breakUserStart = [230, 10]
+let currentPosition = breakUserStart
+
+const breakBallStart = [270, 40]
+let breakBallCurrentPosition = breakBallStart
+
+let timerId
+let score = 0
+
+//my breakBlock
 class BreakBlock {
     constructor(xAxis, yAxis) {
-        this.bottomLeft = (xAxis, yAxis);
-        this.bottomRight = (xAxis + breakBlockWidth, yAxis);
-        this.topLeft = (xAxis, yAxis + breakBlockHeight);
-        this.topRight = (xAxis + breakBlockWidth, yAxis + breakBlockHeight);
+      this.bottomLeft = [xAxis, yAxis]
+      this.bottomRight = [xAxis + breakBlockWidth, yAxis]
+      this.topRight = [xAxis + breakBlockWidth, yAxis + breakBlockHeight]
+      this.topLeft = [xAxis, yAxis + breakBlockHeight]
     }
-}
+  }
 const breakBlocks = [
-    new BreakBlock(10,270)
+    new BreakBlock(10, 270),
+    new BreakBlock(120, 270),
+    new BreakBlock(230, 270),
+    new BreakBlock(340, 270),
+    new BreakBlock(450, 270),
+    new BreakBlock(10, 240),
+    new BreakBlock(120, 240),
+    new BreakBlock(230, 240),
+    new BreakBlock(340, 240),
+    new BreakBlock(450, 240),
+    new BreakBlock(10, 210),
+    new BreakBlock(120, 210),
+    new BreakBlock(230, 210),
+    new BreakBlock(340, 210),
+    new BreakBlock(450, 210)
 ];
-console.log(breakBlocks);
+
 function addBlocks() {
     for (let i = 0; i < breakBlocks.length; i++) {
-        const breakBlock = document.createElement('div');
-        breakBlock.classList.add('breakBlock');
-        breakBlock.style.left = breakBlocks[0].bottomLeft + 'px';
-        breakBlock.style.bottom = breakBlocks[i] + 'px';
-        breakGrid.appendChild(breakBlock);  
+      const breakBlock = document.createElement('div')
+      breakBlock.classList.add('breakBlock')
+      breakBlock.style.left = breakBlocks[i].bottomLeft[0] + 'px'  
+      breakBlock.style.bottom = breakBlocks[i].bottomLeft[1] + 'px'  
+      breakGrid.appendChild(breakBlock)
     }
+  }
+  addBlocks()
+
+  document.getElementById('breakStart').addEventListener('click', async () => { //start button
+    if (!breakStarted) {
+        breakStarted = true;
+        timerId = setInterval(moveBall, 30)
+    }
+});
+  //add user
+const breakUser = document.createElement('div')
+breakUser.classList.add('breakUser')
+breakGrid.appendChild(breakUser)
+drawUser()
+
+//add breakBall
+const breakBall = document.createElement('div')
+breakBall.classList.add('breakBall')
+breakGrid.appendChild(breakBall)
+drawBall()
+
+//move breakUser
+function moveUser(e) {
+  switch (e.key) {
+    case 'ArrowLeft':
+      if (currentPosition[0] > 0) {
+        currentPosition[0] -= 10
+        drawUser()   
+      }
+      break
+    case 'ArrowRight':
+      if (currentPosition[0] < (breakBoardWidth - breakBlockWidth)) {
+        currentPosition[0] += 10
+        drawUser()   
+      }
+      break
+  }
 }
-addBlocks();
-addBlocks();
-console.log(breakBlocks);
+document.addEventListener('keydown', moveUser)
+
+//draw User
+function drawUser() {
+  breakUser.style.left = currentPosition[0] + 'px'
+  breakUser.style.bottom = currentPosition[1] + 'px'
+}
+
+//draw Ball
+function drawBall() {
+  breakBall.style.left = breakBallCurrentPosition[0] + 'px'
+  breakBall.style.bottom = breakBallCurrentPosition[1] + 'px'
+}
+
+//move breakBall
+function moveBall() {
+    breakBallCurrentPosition[0] += xDirection
+    breakBallCurrentPosition[1] += yDirection
+    drawBall()
+    checkForCollisions()
+}
+
+//check for collisions
+function checkForCollisions() {
+  //check for breakBlock collision
+  for (let i = 0; i < breakBlocks.length; i++){
+    if
+    (
+      (breakBallCurrentPosition[0] > breakBlocks[i].bottomLeft[0] && breakBallCurrentPosition[0] < breakBlocks[i].bottomRight[0]) &&
+      ((breakBallCurrentPosition[1] + breakBallDiameter) > breakBlocks[i].bottomLeft[1] && breakBallCurrentPosition[1] < breakBlocks[i].topLeft[1]) 
+    )
+      {
+      const allBlocks = Array.from(document.querySelectorAll('.breakBlock'))
+      allBlocks[i].classList.remove('breakBlock')
+      breakBlocks.splice(i,1)
+      changeDirection()   
+      score++
+      scoreDisplay.innerHTML = score
+      if (breakBlocks.length == 0) {
+        scoreDisplay.innerHTML = 'You\'ve Won'
+        clearInterval(timerId)
+        document.removeEventListener('keydown', moveUser)
+      }
+    }
+  }
+  // check for wall hits
+  if (breakBallCurrentPosition[0] >= (breakBoardWidth - breakBallDiameter) || breakBallCurrentPosition[0] <= 0 || breakBallCurrentPosition[1] >= (breakBoardHeight - breakBallDiameter))
+  {
+    changeDirection()
+  }
+
+  //check for breakUser collision
+  if
+  (
+    (breakBallCurrentPosition[0] > currentPosition[0] && breakBallCurrentPosition[0] < currentPosition[0] + breakBlockWidth) &&
+    (breakBallCurrentPosition[1] > currentPosition[1] && breakBallCurrentPosition[1] < currentPosition[1] + breakBlockHeight ) 
+  )
+  {
+    changeDirection()
+  }
+
+  //game over
+  if (breakBallCurrentPosition[1] <= 0) {
+    clearInterval(timerId)
+    scoreDisplay.innerHTML = 'You\'ve lost'
+    document.removeEventListener('keydown', moveUser)
+  }
+}
+
+
+function changeDirection() {
+  if (xDirection === 2 && yDirection === 2) {
+    yDirection = -2
+    return
+  }
+  if (xDirection === 2 && yDirection === -2) {
+    xDirection = -2
+    return
+  }
+  if (xDirection === -2 && yDirection === -2) {
+    yDirection = 2
+    return
+  }
+  if (xDirection === -2 && yDirection === 2) {
+    xDirection = 2
+    return
+  }
+}
