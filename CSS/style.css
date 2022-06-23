@@ -28,6 +28,7 @@ header, main, footer {
     padding: 1em;
 }
 header {
+    
     /*min-height: 100vh;
     border-left: .5em solid var(--text-color);
     border-right: .5em solid var(--text-color);
@@ -83,6 +84,7 @@ nav ion-icon {
 }
 /* Add a var(--main-bg-color) background color to the top navigation */
 .topnav {
+
     display: flex;
     position: relative;
     background-color: var(--main-accent-color);
@@ -135,25 +137,18 @@ h3 {
     display: inline;
 }
 button {
+    all: unset;
+    display: inline-block;
+    border-radius: 15%;
+    background-color: var(--button-color);
     width: 7em;
     aspect-ratio: 1.618/1;
-    text-align: center;
-    background-color: var(--button-color);
+    text-align: center; 
     max-width: 100%;
-    border-radius: 15%;
     border-color: var(--text-color);
     margin: .1em;
 }
-button:hover {
-    background-color: var(--text-color);
-    border-color: var(--main-bg-color);
-}
-button:hover p, button:hover ion-icon, button:hover {
-    color: var(--button-color);
-}
-/*.external {
-    text-shadow: 2px 2px var(--main-accent-color);
-}*/
+
 ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
@@ -178,14 +173,7 @@ li {
     margin-bottom: .5em;
     /*border-bottom: .5em solid var(--text-color);*/
 }
-/*
-.left {
-    position: relative;
-    border-left: .5em solid var(--text-color);
-}
-.right {
-    border-left: .5em solid var(--text-color);
-}*/
+
 .javascriptGameInstrctions {
     min-height: 10em;
 }
