@@ -401,38 +401,38 @@ function changeDirection() {
 
 //Frogger https://github.com/kubowania/Frogger
 const timeLeftDisplay = document.querySelector('#frogTime')
-const resultDisplay = document.querySelector('#frogScore')
+const frogResultDisplay = document.querySelector('#frogScore')
 const frogStart = document.querySelector('#frogStart')
-const squares = document.querySelectorAll('.frogGrid div')
+const frogSquares = document.querySelectorAll('.frogGrid div')
 const logsLeft = document.querySelectorAll('.log-left')
 const logsRight = document.querySelectorAll('.log-right')
 const carsLeft = document.querySelectorAll('.car-left')
 const carsRight = document.querySelectorAll('.car-right')
 
 let currentIndex = 76
-const width = 9
+const frogWidth = 9
 let frogTimerId
 let outcomeTimerId
 let currentTime = 60
 
 function moveFrog(e) {
-    squares[currentIndex].classList.remove('frog')
+    frogSquares[currentIndex].classList.remove('frog')
 
     switch(e.key) {
         case 'ArrowLeft' :
-             if (currentIndex % width !== 0) currentIndex -= 1
+             if (currentIndex % frogWidth !== 0) currentIndex -= 1
             break
         case 'ArrowRight' :
-            if (currentIndex % width < width - 1) currentIndex += 1
+            if (currentIndex % frogWidth < frogWidth - 1) currentIndex += 1
             break
         case 'ArrowUp' :
-            if (currentIndex - width >=0 ) currentIndex -= width
+            if (currentIndex - frogWidth >=0 ) currentIndex -= frogWidth
             break
         case 'ArrowDown' :
-            if (currentIndex + width < width * width) currentIndex += width
+            if (currentIndex + frogWidth < frogWidth * frogWidth) currentIndex += frogWidth
             break
     }
-    squares[currentIndex].classList.add('frog')
+    frogSquares[currentIndex].classList.add('frog')
 }
 
 function autoMoveElements() {
@@ -535,22 +535,22 @@ function moveCarRight(carRight) {
 
 function lose() {
     if (
-        squares[currentIndex].classList.contains('c1') ||
-        squares[currentIndex].classList.contains('l4') ||
-        squares[currentIndex].classList.contains('l5') ||
+        frogSquares[currentIndex].classList.contains('c1') ||
+        frogSquares[currentIndex].classList.contains('l4') ||
+        frogSquares[currentIndex].classList.contains('l5') ||
         currentTime <= 0
     ) {
-        resultDisplay.textContent = 'You\'ve lost'
+        frogResultDisplay.textContent = 'You\'ve lost'
         clearInterval(frogTimerId)
         clearInterval(outcomeTimerId)
-        squares[currentIndex].classList.remove('frog')
+        frogSquares[currentIndex].classList.remove('frog')
         document.removeEventListener('keyup', moveFrog)
     }
 }
-
+frogResultDisplay
 function win() {
-    if (squares[currentIndex].classList.contains('ending-block')) {
-        resultDisplay.textContent = 'You\'ve won'
+    if (frogSquares[currentIndex].classList.contains('ending-block')) {
+        frogResultDisplay.textContent = 'You\'ve won'
         clearInterval(frogTimerId)
         clearInterval(outcomeTimerId)
         document.removeEventListener('keyup', moveFrog)
@@ -570,3 +570,269 @@ frogStart.addEventListener('click', () => {
         document.addEventListener('keyup', moveFrog)
     }
 })
+// Connect4 https://github.com/kubowania/connect-four
+const connect4Squares = document.querySelectorAll('.connect4Grid div')
+const connect4Win = document.querySelector('#connect4Result')
+const displayCurrentPlayer = document.querySelector('#connect4Current-player')
+let currentPlayer = 1
+
+const winningArrays = [
+    [0, 1, 2, 3],
+    [41, 40, 39, 38],
+    [7, 8, 9, 10],
+    [34, 33, 32, 31],
+    [14, 15, 16, 17],
+    [27, 26, 25, 24],
+    [21, 22, 23, 24],
+    [20, 19, 18, 17],
+    [28, 29, 30, 31],
+    [13, 12, 11, 10],
+    [35, 36, 37, 38],
+    [6, 5, 4, 3],
+    [0, 7, 14, 21],
+    [41, 34, 27, 20],
+    [1, 8, 15, 22],
+    [40, 33, 26, 19],
+    [2, 9, 16, 23],
+    [39, 32, 25, 18],
+    [3, 10, 17, 24],
+    [38, 31, 24, 17],
+    [4, 11, 18, 25],
+    [37, 30, 23, 16],
+    [5, 12, 19, 26],
+    [36, 29, 22, 15],
+    [6, 13, 20, 27],
+    [35, 28, 21, 14],
+    [0, 8, 16, 24],
+    [41, 33, 25, 17],
+    [7, 15, 23, 31],
+    [34, 26, 18, 10],
+    [14, 22, 30, 38],
+    [27, 19, 11, 3],
+    [35, 29, 23, 17],
+    [6, 12, 18, 24],
+    [28, 22, 16, 10],
+    [13, 19, 25, 31],
+    [21, 15, 9, 3],
+    [20, 26, 32, 38],
+    [36, 30, 24, 18],
+    [5, 11, 17, 23],
+    [37, 31, 25, 19],
+    [4, 10, 16, 22],
+    [2, 10, 18, 26],
+    [39, 31, 23, 15],
+    [1, 9, 17, 25],
+    [40, 32, 24, 16],
+    [9, 17, 25, 33],
+    [8, 16, 24, 32],
+    [11, 17, 23, 29],
+    [12, 18, 24, 30],
+    [1, 2, 3, 4],
+    [5, 4, 3, 2],
+    [8, 9, 10, 11],
+    [12, 11, 10, 9],
+    [15, 16, 17, 18],
+    [19, 18, 17, 16],
+    [22, 23, 24, 25],
+    [26, 25, 24, 23],
+    [29, 30, 31, 32],
+    [33, 32, 31, 30],
+    [36, 37, 38, 39],
+    [40, 39, 38, 37],
+    [7, 14, 21, 28],
+    [8, 15, 22, 29],
+    [9, 16, 23, 30],
+    [10, 17, 24, 31],
+    [11, 18, 25, 32],
+    [12, 19, 26, 33],
+    [13, 20, 27, 34],
+]
+
+function checkBoard() {
+    for (let i = 0; i < winningArrays.length; i++) {
+        const square1 = connect4Squares[winningArrays[i][0]]
+        const square2 = connect4Squares[winningArrays[i][1]]
+        const square3 = connect4Squares[winningArrays[i][2]]
+        const square4 = connect4Squares[winningArrays[i][3]]
+    
+    //check those squares to see if they all have the class of connect4Player-one
+    if 
+    (square1.classList.contains('connect4Player-one') && 
+    square2.classList.contains('connect4Player-one') &&
+    square3.classList.contains('connect4Player-one') &&
+    square4.classList.contains('connect4Player-one')
+    )
+     {
+        connect4Result.innerHTML = 'Player One Wins!'
+    }
+    //check squares to see if they all have the class of connect4Player-two
+    if 
+    (square1.classList.contains('connect4Player-two') && 
+    square2.classList.contains('connect4Player-two') &&
+    square3.classList.contains('connect4Player-two') &&
+    square4.classList.contains('connect4Player-two')
+    )
+     {
+        connect4Result.innerHTML = 'Player Two Wins!'
+    }
+}
+}
+
+
+for (let i = 0; i < connect4Squares.length; i++) {
+    connect4Squares[i].onclick = () => {
+        //if the square below your current square is taken,
+        //you can go on top of it
+
+        if (connect4Squares[i + 7].classList.contains('taken')) {
+            if (currentPlayer == 1) {
+                connect4Squares[i].classList.add('taken')
+                connect4Squares[i].classList.add('connect4Player-one')
+                currentPlayer = 2
+                displayCurrentPlayer.innerHTML = currentPlayer
+            }
+            else if (currentPlayer ==2) {
+            connect4Squares[i].classList.add('taken')
+            connect4Squares[i].classList.add('connect4Player-two')
+            currentPlayer = 1
+            displayCurrentPlayer.innerHTML = currentPlayer
+        }
+            
+        } else alert('cant go here')
+        checkBoard()
+    }
+}
+//Space Invaders https://github.com/kubowania/space-invaders
+const spaceGrid = document.querySelector('.spaceGrid')
+const spaceScore = document.querySelector('.spaceScore')
+let currentShooterIndex = 202
+let spaceWidth = 15
+let direction = 1
+let invadersId
+let goingRight = true
+let aliensRemoved = []
+let results = 0
+
+for (let i = 0; i < 225; i++) {
+  const square = document.createElement('div')
+  spaceGrid.appendChild(square)
+}
+
+const squares = Array.from(document.querySelectorAll('.spaceGrid div'))
+
+const alienInvaders = [
+  0,1,2,3,4,5,6,7,8,9,
+  15,16,17,18,19,20,21,22,23,24,
+  30,31,32,33,34,35,36,37,38,39
+]
+
+function draw() {
+  for (let i = 0; i < alienInvaders.length; i++) {
+    if(!aliensRemoved.includes(i)) {
+      squares[alienInvaders[i]].classList.add('invader')
+    }
+  }
+}
+
+draw()
+
+function remove() {
+  for (let i = 0; i < alienInvaders.length; i++) {
+    squares[alienInvaders[i]].classList.remove('invader')
+  }
+}
+
+squares[currentShooterIndex].classList.add('shooter')
+
+
+function moveShooter(e) {
+  squares[currentShooterIndex].classList.remove('shooter')
+  switch(e.key) {
+    case 'ArrowLeft':
+      if (currentShooterIndex % spaceWidth !== 0) currentShooterIndex -=1
+      break
+    case 'ArrowRight' :
+      if (currentShooterIndex % spaceWidth < spaceWidth -1) currentShooterIndex +=1
+      break
+  }
+  squares[currentShooterIndex].classList.add('shooter')
+}
+document.addEventListener('keydown', moveShooter)
+
+function moveInvaders() {
+  const leftEdge = alienInvaders[0] % spaceWidth === 0
+  const rightEdge = alienInvaders[alienInvaders.length - 1] % spaceWidth === spaceWidth -1
+  remove()
+
+  if (rightEdge && goingRight) {
+    for (let i = 0; i < alienInvaders.length; i++) {
+      alienInvaders[i] += spaceWidth +1
+      direction = -1
+      goingRight = false
+    }
+  }
+
+  if(leftEdge && !goingRight) {
+    for (let i = 0; i < alienInvaders.length; i++) {
+      alienInvaders[i] += spaceWidth -1
+      direction = 1
+      goingRight = true
+    }
+  }
+
+  for (let i = 0; i < alienInvaders.length; i++) {
+    alienInvaders[i] += direction
+  }
+
+  draw()
+
+  if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
+    spaceScore.innerHTML = 'GAME OVER'
+    clearInterval(invadersId)
+  }
+
+  for (let i = 0; i < alienInvaders.length; i++) {
+    if(alienInvaders[i] > (squares.length)) {
+      spaceScore.innerHTML = 'GAME OVER'
+      clearInterval(invadersId)
+    }
+  }
+  if (aliensRemoved.length === alienInvaders.length) {
+    spaceScore.innerHTML = 'YOU WIN'
+    clearInterval(invadersId)
+  }
+}
+invadersId = setInterval(moveInvaders, 600)
+
+function shoot(e) {
+  let laserId
+  let currentLaserIndex = currentShooterIndex
+  function moveLaser() {
+    squares[currentLaserIndex].classList.remove('laser')
+    currentLaserIndex -= spaceWidth
+    squares[currentLaserIndex].classList.add('laser')
+
+    if (squares[currentLaserIndex].classList.contains('invader')) {
+      squares[currentLaserIndex].classList.remove('laser')
+      squares[currentLaserIndex].classList.remove('invader')
+      squares[currentLaserIndex].classList.add('boom')
+
+      setTimeout(()=> squares[currentLaserIndex].classList.remove('boom'), 300)
+      clearInterval(laserId)
+
+      const alienRemoved = alienInvaders.indexOf(currentLaserIndex)
+      aliensRemoved.push(alienRemoved)
+      results++
+      spaceScore.innerHTML = results
+      console.log(aliensRemoved)
+
+    }
+
+  }
+  switch(e.key) {
+    case 'ArrowUp':
+      laserId = setInterval(moveLaser, 100)
+  }
+}
+
+document.addEventListener('keydown', shoot)

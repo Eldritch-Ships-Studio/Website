@@ -252,7 +252,7 @@ li {
 
 /*Frogger Game*/
 .frogGrid {
-    border: 1px solid black;
+    border: .35em solid var(--main-bg-color);
     height: 180px;
     width: 180px;
     display: flex;
@@ -289,6 +289,61 @@ li {
 
 .frog {
     background-color: green;
+}
+/*Connect 4*/
+.connect4Grid {
+    border: solid .35em var(--main-bg-color);
+    height: 120px;
+    width: 140px;
+    display: flex;
+    flex-wrap:  wrap;
+}
+
+.connect4Grid div {
+    height: 20px;
+    width: 20px;
+
+}
+
+.connect4Player-one {
+    background-color: var(--button-color);
+    border-radius: 10px;
+}
+
+.connect4Player-two {
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+}
+/*Space Invaders*/
+
+.SpaceGrid {
+	width: 300px;
+	height: 300px;
+	border: solid var(--main-bg-color) 1px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.spaceGrid div {
+	width: 20px;
+	height: 20px;
+}
+
+.invader {
+	background-color: purple;
+	border-radius: 10px;
+}
+
+.shooter {
+	background-color: green;
+}
+
+.laser {
+	background-color: orange;
+}
+
+.boom {
+	background-color: red;
 }
 /*Color picker tool*/
 #colorPicker {
