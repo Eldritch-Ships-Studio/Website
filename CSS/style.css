@@ -1,3 +1,92 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+/* set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
 :root {
     --main-color: cornflowerblue;
     --main-bg-color: midnightblue;
@@ -5,7 +94,7 @@
     --text-color: midnightblue;
     --button-color: powderblue;
 }
- *{
+*{
     display: flexbox;
     flex: 0 1 auto;
     flex-wrap: wrap;
@@ -17,7 +106,6 @@
 body {
     background-color:var(--main-color);
     margin: 0px;
-    /*cursor: url(https://www.eldritchships.com/Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg), auto;*/
 }
 header, main, footer {
     width: 80%;
@@ -28,12 +116,6 @@ header, main, footer {
     padding: 1em;
 }
 header {
-    
-    /*min-height: 100vh;
-    border-left: .5em solid var(--text-color);
-    border-right: .5em solid var(--text-color);
-    border-top: .5em solid var(--text-color);
-    border-radius: 15%;*/
     width: 85%;
     margin: 0em .2em;
     padding: 0em .25em;
@@ -45,11 +127,15 @@ header {
 }
 main {
     text-align: left;
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
 }
 footer {
     position: relative;
     margin: auto;
-    width: fit-content;
+    min-width: fit-content;
+    width: 45%;
     height: 10%;
     text-align: center;
     justify-content: center;
@@ -63,7 +149,7 @@ footer {
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
     color: var(--text-color);
-    /*max-width: 50em;*/
+    max-width: 50em;
 }
 li {
     list-style: none;
@@ -106,33 +192,22 @@ nav ion-icon {
     padding: 0em .2em;
     margin: .1em;
     text-decoration: none;
-    /*font-size: 17px;*/
     border-radius: 15%;
     border: .2em solid var(--text-color);
-    /*text-shadow: 2px 2px 1px var(--main-color);*/
     width: 5em;
     min-width: fit-content;
   }
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: var(--main-accent-color);
-    /*color: var(--main-bg-color);*/
-    /*text-shadow: -2px 2px 1px var(--text-color);*/
   }
   
 /* Add an active class to highlight the current page */
 .topnav a.active {
     background-color: var(--button-color);
     color: var(--text-color);
-    /*text-shadow: none;*/
   }
   
-.portrait {
-    aspect-ratio: 4/5;
-}
-/*h2 {
-    text-shadow: 2px 2px var(--main-accent-color);
-}*/
 h3 {
     display: inline;
 }
