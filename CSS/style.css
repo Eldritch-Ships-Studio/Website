@@ -3,15 +3,10 @@
 /* ------------------- */
 
 :root {
-    --clr-dark: 230 35% 7%;
-    --clr-light: 231 77% 90%;
-    --clr-white: 0 0% 100%;
-
-    --main-color: cornflowerblue;
-    --main-bg-color: midnightblue;
-    --main-accent-color: deepskyblue;
-    --text-color: midnightblue;
-    --button-color: powderblue;
+    --clr-dark: midnightblue;
+    --clr-light: cornflowerblue;
+    --clr-white: powderblue;
+    --clr-accent: deepskyblue;
 }
 /* ------------------- */
 /* Reset               */
@@ -111,13 +106,7 @@ select {
 .text-dark { color: hsl( var(--clr-dark) );}
 .text-accent { color: hsl( var(--clr-light) );}
 .text-white { color: hsl( var(--clr-white) );}
-/*:root {
-    --main-color: cornflowerblue;
-    --main-bg-color: midnightblue;
-    --main-accent-color: deepskyblue;
-    --text-color: midnightblue;
-    --button-color: powderblue;
-}*/
+
 *{
     display: flexbox;
     flex: 0 1 auto;
@@ -128,13 +117,13 @@ select {
     padding: 0;
 }
 body {
-    background-color:var(--main-color);
+    background-color:var(--clr-light);
     margin: 0px;
 }
 header, main, footer {
     width: 80%;
     height: 80%;
-    background-color: var(--main-color);
+    background-color: var(--clr-light);
     text-align: center;
     margin: 1em;
     padding: 1em;
@@ -159,20 +148,20 @@ footer {
     position: relative;
     margin: auto;
     min-width: fit-content;
-    width: 45%;
+    width: 35%;
     height: 10%;
     text-align: center;
     justify-content: center;
     justify-self: center;
-    background-color: var(--main-accent-color);
-    border-left: .5em solid var(--text-color);
-    border-right: .5em solid var(--text-color);
-    border-top: .5em solid var(--text-color);
+    background-color: var(--clr-accent);
+    border-left: .5em solid var(--clr-dark);
+    border-right: .5em solid var(--clr-dark);
+    border-top: .5em solid var(--clr-dark);
     border-radius: 15%;
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--clr-dark);
     max-width: 50em;
 }
 li {
@@ -186,52 +175,53 @@ img, video {
 ion-icon {
     margin: auto;
     padding: 0 .3em;
-    color: var(--text-color);
+    color: var(--clr-dark);
     font-size: 32px;
 }
 nav ion-icon {
     position: relative;
 }
-/* Add a var(--main-bg-color) background color to the top navigation */
-.topnav {
+nav {
 
     display: flex;
     position: relative;
-    background-color: var(--main-accent-color);
-    justify-content: space-around;
-    width: fit-content;
-    border-left: .5em solid var(--text-color);
-    border-right: .5em solid var(--text-color);
-    border-bottom: .5em solid var(--text-color);
+    background-color: var(--clr-accent);
+    min-width: fit-content;
+    width: 35%;
+    border-left: .5em solid var(--clr-dark);
+    border-right: .5em solid var(--clr-dark);
+    border-bottom: .5em solid var(--clr-dark);
     border-radius: 15%;
     padding: 1em;
-    margin: 0em .1em .1em .1em;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    min-width: fit-content;
+    height: 10%;
+    text-align: center;
+    justify-self: center;
   }
-/* Style the links inside the navigation bar */
-.topnav a{
+nav a{
     display: inline;
-    color: var(--text-color);
-    background-color: var(--main-color);
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
     text-align: center;
     padding: 0em .2em;
     margin: .1em;
     text-decoration: none;
     border-radius: 15%;
-    border: .2em solid var(--text-color);
-    width: 5em;
+    border: .2em solid var(--clr-dark);
+    width: 6em;
     min-width: fit-content;
+    min-height: fit-content;
   }
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: var(--main-accent-color);
+nav a:hover {
+    background-color: var(--clr-white);
   }
-  
-/* Add an active class to highlight the current page */
-.topnav a.active {
-    background-color: var(--button-color);
-    color: var(--text-color);
+nav a.active {
+    background-color: var(--clr-white);
+    color: var(--clr-dark);
   }
-  
 h3 {
     display: inline;
 }
@@ -239,12 +229,12 @@ button {
     all: unset;
     display: inline-block;
     border-radius: 15%;
-    background-color: var(--button-color);
+    background-color: var(--clr-white);
     width: 7em;
     aspect-ratio: 1.618/1;
     text-align: center; 
     max-width: 100%;
-    border-color: var(--text-color);
+    border-color: var(--clr-dark);
     margin: .1em;
 }
 
@@ -269,8 +259,7 @@ ul {
   }
 
 li {
-    margin-bottom: .5em;
-    /*border-bottom: .5em solid var(--text-color);*/
+    margin: .5em;
 }
 
 .javascriptGameInstrctions {
@@ -278,7 +267,6 @@ li {
 }
 .javascriptGame {
     min-height: 20em;
-    /*background-color: var(--main-accent-color);*/
 }
 /*Memory Game*/
 #memGrid {
@@ -293,7 +281,7 @@ li {
     width: 8em;
     height: 8em;
     margin: 0;
-    border: .5em solid var(--main-bg-color);
+    border: .5em solid var(--clr-dark);
     justify-content:space-between;
 }
 /*Mole Game*/
@@ -311,27 +299,27 @@ li {
     /*max-width: 20%;
     max-height: 20%;
     aspect-ratio: 1/1;*/
-    border: .35em solid var(--main-bg-color);
+    border: .35em solid var(--clr-dark);
     display: inline-flex;
-    color: var(--main-bg-color);
+    color: var(--clr-dark);
 }
 .mole {
     background-image: url(../Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg);
     background-size: cover;
-    border: .35em solid var(--button-color);
+    border: .35em solid var(--clr-white);
 }
 /*Breakout Game*/
 #breakGrid {
     position: absolute;
     width: 600px;
     height: 300px;
-    border: .35em solid var(--main-bg-color);
+    border: .35em solid var(--clr-dark);
 }
 .breakBlock {
     width: 100px;
     height: 20px;
     margin: 2px;
-    background-color: var(--main-accent-color);
+    background-color: var(--clr-white);
     position: absolute;
     display: block;
 }
@@ -339,19 +327,19 @@ li {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: var(--button-color);
+    background-color: var(--clr-white);
   }
   .breakBall {
     position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-color: var(--text-color);
+    background-color: var(--clr-dark);
   }
 
 /*Frogger Game*/
 .frogGrid {
-    border: .35em solid var(--main-bg-color);
+    border: .35em solid var(--clr-dark);
     height: 180px;
     width: 180px;
     display: flex;
@@ -391,7 +379,7 @@ li {
 }
 /*Connect 4*/
 .connect4Grid {
-    border: solid .35em var(--main-bg-color);
+    border: solid .35em var(--clr-dark);
     height: 120px;
     width: 140px;
     display: flex;
@@ -405,12 +393,12 @@ li {
 }
 
 .connect4Player-one {
-    background-color: var(--button-color);
+    background-color: var(--clr-white);
     border-radius: 10px;
 }
 
 .connect4Player-two {
-    background-color: var(--main-bg-color);
+    background-color: var(--clr-dark);
     border-radius: 10px;
 }
 /*Space Invaders*/
@@ -418,7 +406,7 @@ li {
 .SpaceGrid {
 	width: 300px;
 	height: 300px;
-	border: solid var(--main-bg-color) 1px;
+	border: solid var(--clr-dark) 1px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -456,7 +444,7 @@ li {
 
 #box {
     outline: none;
-    border: 2px solid var(--main-bg-color);
+    border: 2px solid var(--clr-dark);
     border-radius: 50px;
     height: 40px;
     width: 120px;
