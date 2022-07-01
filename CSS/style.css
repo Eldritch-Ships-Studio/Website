@@ -121,21 +121,21 @@ body {
     margin: 0px;
 }
 header, main, footer {
-    width: 80%;
     height: 80%;
     background-color: var(--clr-light);
     text-align: center;
-    margin: 1em;
     padding: 1em;
+    width: 100vw;
 }
 header {
-    width: 85%;
-    margin: 0em .2em;
+    /*margin: 0em .2em;*/
     padding: 0em .25em;
     align-items: center;
     text-align: center;
     justify-content: center;
     justify-self: center;
+    background-color: var(--clr-accent);
+    border-bottom: .5em solid var(--clr-dark);
 
 }
 main {
@@ -146,23 +146,18 @@ main {
 }
 footer {
     position: relative;
-    margin: auto;
     min-width: fit-content;
-    width: 35%;
     height: 10%;
     text-align: center;
     justify-content: center;
     justify-self: center;
     background-color: var(--clr-accent);
-    border-left: .5em solid var(--clr-dark);
-    border-right: .5em solid var(--clr-dark);
     border-top: .5em solid var(--clr-dark);
-    border-radius: 15%;
 }
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
     color: var(--clr-dark);
-    max-width: 50em;
+    /*max-width: 50em;*/
 }
 li {
     list-style: none;
@@ -180,17 +175,13 @@ ion-icon {
 }
 nav ion-icon {
     position: relative;
+    margin-top: .2em;
 }
 nav {
-
     display: flex;
     position: relative;
-    background-color: var(--clr-accent);
     min-width: fit-content;
-    width: 35%;
-    border-left: .5em solid var(--clr-dark);
-    border-right: .5em solid var(--clr-dark);
-    border-bottom: .5em solid var(--clr-dark);
+    width: 35%;  
     border-radius: 15%;
     padding: 1em;
     justify-content: center;
@@ -222,9 +213,6 @@ nav a.active {
     background-color: var(--clr-white);
     color: var(--clr-dark);
   }
-h3 {
-    display: inline;
-}
 button {
     all: unset;
     display: inline-block;
