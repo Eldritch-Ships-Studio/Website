@@ -125,7 +125,7 @@ header, main, footer {
     background-color: var(--clr-light);
     text-align: center;
     padding: 1em;
-    width: 100vw;
+    width: 99vw;
 }
 header {
     /*margin: 0em .2em;*/
