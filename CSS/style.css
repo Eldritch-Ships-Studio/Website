@@ -125,7 +125,7 @@ header, main, footer {
     background-color: var(--clr-light);
     text-align: center;
     padding: 1em;
-    width: 99vw;
+    width: 100%;
 }
 header {
     /*margin: 0em .2em;*/
@@ -139,10 +139,9 @@ header {
 
 }
 main {
-    text-align: left;
     padding-inline: 2em;
     margin-inline: auto;
-    max-width: 80rem;
+    /*max-width: 80rem;*/
 }
 footer {
     position: relative;
@@ -166,6 +165,7 @@ li {
 img, video {
     max-width: 100%;
     height: auto;
+    margin: auto;
 }
 ion-icon {
     margin: auto;
