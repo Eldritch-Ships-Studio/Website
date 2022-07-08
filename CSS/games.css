@@ -1,0 +1,199 @@
+@media only screen and (max-width: 1100px) {
+    /* For mobile phones: */
+    main {
+        padding: 0;
+    }
+    ul {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        padding: 0;
+    }
+    #memGrid {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        max-width: 100%;
+    }
+    .memCard {
+        max-width: 6em;
+        max-height: 6em;
+    }
+    #moleGrid {
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .moleHole {
+        max-width: 6em;
+        max-height: 6em;
+    }
+  }
+
+.javascriptGameInstrctions {
+    min-height: 10em;
+}
+.javascriptGame {
+    min-height: 20em;
+}
+/*Memory Game*/
+#memGrid {
+    width: 24em;
+    aspect-ratio: 3/4;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: fit-content;
+}
+.memCard {
+    width: 8em;
+    height: 8em;
+    margin: 0;
+    border: .35em solid var(--clr-dark);
+}
+/*Mole Game*/
+#moleGrid {
+    width: 30em;
+    display: flexbox;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    margin-right: auto;
+}
+.moleHole {
+    width: 8em;
+    height: 8em;
+    border: .35em solid var(--clr-dark);
+    display: inline-flex;
+    color: var(--clr-dark);
+}
+.mole {
+    background-image: url(../Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg);
+    background-size: cover;
+    border: .35em solid var(--clr-white);
+}
+/*Breakout Game
+#breakGrid {
+    position: flex;
+    width: 600px;
+    max-width: 100%;
+    height: 300px;
+    border: .35em solid var(--clr-dark);
+    margin-left: auto;
+    margin-right: auto;
+}
+.breakBlock {
+    width: 100px;
+    height: 1em;
+    margin: 2px;
+    background-color: var(--clr-white);
+    position: flex;
+    display: block;
+}
+.breakUser {
+    position: flex;
+    width: 100px;
+    height: 20px;
+    background-color: var(--clr-white);
+  }
+  .breakBall {
+    position: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: var(--clr-dark);
+  }*/
+
+/*Frogger Game*/
+.frogGrid {
+    border: .35em solid var(--clr-dark);
+    height: 20em;
+    width: 20em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frogGrid div {
+    height: 2em;
+    width: 2em;
+}
+
+.ending-block {
+    background-color: red;
+}
+
+.starting-block {
+    background-color: blue;
+}
+.l1, .l2, .l3 {
+    background-color: brown;
+}
+
+.l4, .l5 {
+    background-color: lightblue;
+}
+
+.c1 {
+    background-color: black;
+}
+
+.c2, .c3 {
+    background-color: lightgrey;
+}
+
+.frog {
+    background-color: green;
+}
+/*Connect 4*/
+.connect4Grid {
+    border: solid .35em var(--clr-dark);
+    height: 13em;
+    width: 15em;
+    display: flex;
+    flex-wrap:  wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.connect4Grid div {
+    height: 2em;
+    width: 2em;
+}
+
+.connect4Player-one {
+    background-color: var(--clr-white);
+    border-radius: 1em;
+}
+
+.connect4Player-two {
+    background-color: var(--clr-dark);
+    border-radius: 1em;
+}
+/*Space Invaders
+
+.SpaceGrid {
+	width: 300px;
+	height: 300px;
+	border: solid var(--clr-dark) 1px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.spaceGrid div {
+	width: 20px;
+	height: 20px;
+}
+
+.invader {
+	background-color: purple;
+	border-radius: 10px;
+}
+
+.shooter {
+	background-color: green;
+}
+
+.laser {
+	background-color: orange;
+}
+
+.boom {
+	background-color: red;
+}*/

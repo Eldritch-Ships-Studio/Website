@@ -3,10 +3,26 @@
 /* ------------------- */
 
 :root {
+    /* colors */
     --clr-dark: midnightblue;
     --clr-light: cornflowerblue;
     --clr-white: powderblue;
     --clr-accent: deepskyblue;
+
+    /* font-sizes */
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+        
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
 }
 /* ------------------- */
 /* Reset               */
@@ -33,11 +49,14 @@ figure,
 picture {
     margin: 0; 
 }
-
-/* set up the body */
-body {
-    line-height: 1.5;
-    min-height: 100vh;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
 }
 
 /* make images easier to work with */
@@ -119,6 +138,12 @@ select {
 body {
     background-color:var(--clr-light);
     margin: 0px;
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl( var(--clr-white) );
+    background-color: hsl( var(--clr-dark) );
+    line-height: 1.5;
+    min-height: 100vh;
 }
 header, main, footer {
     height: 80%;
@@ -128,7 +153,6 @@ header, main, footer {
     width: 100%;
 }
 header {
-    /*margin: 0em .2em;*/
     padding: 0em .25em;
     align-items: center;
     text-align: center;
@@ -141,7 +165,6 @@ header {
 main {
     padding-inline: 2em;
     margin-inline: auto;
-    /*max-width: 80rem;*/
 }
 footer {
     position: relative;
@@ -156,7 +179,15 @@ footer {
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
     color: var(--clr-dark);
-    /*max-width: 50em;*/
+}
+h1 {
+    font-size: var(--fs-900);
+}
+h2 {
+    font-size: var(--fs-600);
+}
+h3 {
+    font-size: var(--fs-500);
 }
 li {
     list-style: none;
@@ -171,7 +202,7 @@ ion-icon {
     margin: auto;
     padding: 0 .3em;
     color: var(--clr-dark);
-    font-size: 32px;
+    font-size: var(--fs-600)
 }
 nav ion-icon {
     position: relative;
@@ -222,10 +253,12 @@ button {
     aspect-ratio: 1.618/1;
     text-align: center; 
     max-width: 100%;
-    border-color: var(--clr-dark);
     margin: .1em;
+    border: .2em solid var(--clr-white);
 }
-
+button:hover {
+    border: .2em solid var(--clr-dark);
+}
 ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
@@ -236,189 +269,9 @@ ul {
     ul {
         grid-template-columns: repeat(auto-fit, minmax(75%, 1fr));
     }
-    #memGrid {
-        max-width: 100%;
-        aspect-ratio: 4/3;
-    }
-    #moleGrid {
-        max-width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-  }
-
+}
 li {
     margin: .5em;
-}
-
-.javascriptGameInstrctions {
-    min-height: 10em;
-}
-.javascriptGame {
-    min-height: 20em;
-}
-/*Memory Game*/
-#memGrid {
-    width: 27em;
-    /*height: 40em;*/
-    aspect-ratio: 3/4;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-.memCard {
-    width: 8em;
-    height: 8em;
-    margin: 0;
-    border: .5em solid var(--clr-dark);
-    justify-content:space-between;
-}
-/*Mole Game*/
-#moleGrid {
-    width: 30em;
-    /*height: 30em;*/
-    display: flexbox;
-    aspect-ratio: 1/1;
-    /*flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
-}
-.moleHole {
-    width: 8em;
-    height: 8em;
-    /*max-width: 20%;
-    max-height: 20%;
-    aspect-ratio: 1/1;*/
-    border: .35em solid var(--clr-dark);
-    display: inline-flex;
-    color: var(--clr-dark);
-}
-.mole {
-    background-image: url(../Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg);
-    background-size: cover;
-    border: .35em solid var(--clr-white);
-}
-/*Breakout Game*/
-#breakGrid {
-    position: absolute;
-    width: 600px;
-    height: 300px;
-    border: .35em solid var(--clr-dark);
-}
-.breakBlock {
-    width: 100px;
-    height: 20px;
-    margin: 2px;
-    background-color: var(--clr-white);
-    position: absolute;
-    display: block;
-}
-.breakUser {
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    background-color: var(--clr-white);
-  }
-  .breakBall {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: var(--clr-dark);
-  }
-
-/*Frogger Game*/
-.frogGrid {
-    border: .35em solid var(--clr-dark);
-    height: 180px;
-    width: 180px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.frogGrid div {
-    height: 20px;
-    width: 20px;
-}
-
-.ending-block {
-    background-color: red;
-}
-
-.starting-block {
-    background-color: blue;
-}
-.l1, .l2, .l3 {
-    background-color: brown;
-}
-
-.l4, .l5 {
-    background-color: lightblue;
-}
-
-.c1 {
-    background-color: black;
-}
-
-.c2, .c3 {
-    background-color: lightgrey;
-}
-
-.frog {
-    background-color: green;
-}
-/*Connect 4*/
-.connect4Grid {
-    border: solid .35em var(--clr-dark);
-    height: 120px;
-    width: 140px;
-    display: flex;
-    flex-wrap:  wrap;
-}
-
-.connect4Grid div {
-    height: 20px;
-    width: 20px;
-
-}
-
-.connect4Player-one {
-    background-color: var(--clr-white);
-    border-radius: 10px;
-}
-
-.connect4Player-two {
-    background-color: var(--clr-dark);
-    border-radius: 10px;
-}
-/*Space Invaders*/
-
-.SpaceGrid {
-	width: 300px;
-	height: 300px;
-	border: solid var(--clr-dark) 1px;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.spaceGrid div {
-	width: 20px;
-	height: 20px;
-}
-
-.invader {
-	background-color: purple;
-	border-radius: 10px;
-}
-
-.shooter {
-	background-color: green;
-}
-
-.laser {
-	background-color: orange;
-}
-
-.boom {
-	background-color: red;
 }
 /*Color picker tool*/
 #colorPicker {

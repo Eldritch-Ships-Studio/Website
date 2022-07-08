@@ -237,7 +237,7 @@ let breakBallCurrentPosition = breakBallStart
 let breakTimerId
 let score = 0
 
-//my breakBlock
+/*//my breakBlock
 class BreakBlock {
     constructor(xAxis, yAxis) {
       this.bottomLeft = [xAxis, yAxis]
@@ -397,7 +397,7 @@ function changeDirection() {
     xDirection = 2
     return
   }
-}
+}*/
 
 //Frogger https://github.com/kubowania/Frogger
 const timeLeftDisplay = document.querySelector('#frogTime')
@@ -685,6 +685,7 @@ for (let i = 0; i < connect4Squares.length; i++) {
         //you can go on top of it
 
         if (connect4Squares[i + 7].classList.contains('taken')) {
+          connect4Result.innerHTML = ''
             if (currentPlayer == 1) {
                 connect4Squares[i].classList.add('taken')
                 connect4Squares[i].classList.add('connect4Player-one')
@@ -698,12 +699,12 @@ for (let i = 0; i < connect4Squares.length; i++) {
             displayCurrentPlayer.innerHTML = currentPlayer
         }
             
-        } else alert('cant go here')
+        } else connect4Result.innerHTML = 'Can\'t go here'
         checkBoard()
     }
 }
 //Space Invaders https://github.com/kubowania/space-invaders
-const spaceGrid = document.querySelector('.spaceGrid')
+/*const spaceGrid = document.querySelector('.spaceGrid')
 const spaceScore = document.querySelector('.spaceScore')
 let currentShooterIndex = 202
 let spaceWidth = 15
@@ -835,4 +836,4 @@ function shoot(e) {
   }
 }
 
-document.addEventListener('keydown', shoot)
+document.addEventListener('keydown', shoot)*/

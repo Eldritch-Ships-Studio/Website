@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eldritch Ships Studio</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/games.css">
     <link rel="manifest" href="./manifest.json">
     <script src="./main.js"></script>
     <meta Cache-Control: max-age=31536000>
@@ -13,6 +14,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./Resources\Logos\Eldritch Ships Studios\apple-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Resources\Logos\Eldritch Ships Studios\favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./Resources\Logos\Eldritch Ships Studios\favicon-16x16.png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -27,7 +32,7 @@
     <ul>
     <li class="javascriptGameInstrctions">
     <div>
-    <h1>Rock, Paper, Scissors</h1>
+    <h2>Rock, Paper, Scissors</h2>
     <p><b>Rules:</b> Choose either; Rock, Paper, or Scissors and test your luck aginst a computer also choosing Rock, Paper, or Scissors. Paper beats Rock. Rock beats Scissors. Scissors beats Paper.</p>
     <h3>Score: <span id="rpsResult"></span></h3>    
     </div>
@@ -43,7 +48,7 @@
     </div>
     </li>
     <li class="javascriptGameInstrctions">
-    <h1>Memory</h1>
+    <h2>Memory</h2>
     <p><b>Rules:</b> Choose a tile and click to flip it over, revealing it's hidden secrets underneath. If you reveal 2 matching tiles, you score. Match them all to win.</p>
     <h3 style="display: block;">Score: <span id="memScore">0</span></h3>
     </li>
@@ -54,7 +59,7 @@
     </div>
     </li>
     <li class="javascriptGameInstrctions">
-        <h1>Whac a Mole</h1>
+        <h2>Whac a Mole</h2>
         <p><b>Rules:</b> Start the mole with the start button. The mole will pop up in one of the nine holes. Click to whack that mole and score before time runs out.</p>
         <button id="moleStart">Start</button>
             <h3>Score: <span id="moleScore">0</span></h3>
@@ -77,8 +82,8 @@
             </div>
         </div>
     </li>
-    <li class="javascriptGameInstrctions">
-        <h1>Breakout</h1>
+    <!--<li class="javascriptGameInstrctions">
+        <h2>Breakout</h2>
         <p><b>Rules:</b> Start the ball with the start button. The ball will remove a brick and score on contact. Move your bar left and right with the arrow keys. Don't let the ball fall down. Clear all 15 blocks to win.</p>
         <p>Not available on mobile controls at the moment</p>
         <button id="breakStart">Start</button>
@@ -88,9 +93,9 @@
         <div id="breakGame">
         <div id="breakGrid"></div>
         </div>
-    </li>
+    </li>-->
     <li class="javascriptGameInstrctions">
-        <h1>Frogger</h1>
+        <h2>Frogger</h2>
         <p><b>Rules:</b> Start the logs with the start button. Advance Frogger forward acrossed the water over the logs with the arrow keys. Reach the red block to win.</p>
         <p>Not available on mobile controls at the moment</p>
         <button  id="frogStart">Start</button>
@@ -184,7 +189,7 @@
         </div>
     </li>
     <li class="javascriptGameInstrctions">
-        <h1>Connect 4</h1>
+        <h2>Connect 4</h2>
         <p><b>Rules:</b> Start by having player one place a token on the bottom row. Take turns placing tokens until one player has 4 tokens in a row.</p>
         <h3>The current player is: Player <span id="connect4Current-player">1</span></h3>
         <h3 id="connect4Result"></h3>
@@ -248,7 +253,7 @@
         </div>
     </li>
     <!--<li class="javascriptGameInstrctions">
-        <h1>Space Invaders</h1>
+        <h2>Space Invaders</h2>
         <p><b>Rules:</b> Stop the invaders from space.</p>
         <h3>Score: <span id="spaceScore">0</span></h3>
     </li>
