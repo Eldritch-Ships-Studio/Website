@@ -1,32 +1,9 @@
-@media only screen and (max-width: 1100px) {
-    /* For mobile phones: */
-    main {
-        padding: 0;
-    }
-    ul {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-        padding: 0;
-    }
-    #memGrid {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-        max-width: 100%;
-    }
-    .memCard {
-        max-width: 6em;
-        max-height: 6em;
-    }
-    #moleGrid {
-        max-width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-    .moleHole {
-        max-width: 6em;
-        max-height: 6em;
-    }
-  }
-
 .javascriptGameInstrctions {
     min-height: 10em;
+}
+.javascriptGameInstrctions p {
+    margin: auto;
+    max-width: 35em;
 }
 .javascriptGame {
     min-height: 20em;
@@ -197,3 +174,32 @@
 .boom {
 	background-color: red;
 }*/
+@media only screen and (max-width: 550px) {
+    /* For mobile phones: */
+    main {
+        padding: 0;
+    }
+    ul {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        padding: 0;
+    }
+    #memGrid {
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        max-width: 100%;
+    }
+    .memCard {
+        max-width: 6em;
+        max-height: 6em;
+    }
+    #moleGrid {
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .moleHole {
+        max-width: 6em;
+        max-height: 6em;
+    }
+    .javascriptGame {
+        margin-left: 0;
+    }
+  }
