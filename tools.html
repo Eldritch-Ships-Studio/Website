@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldritch Ships Studio</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/tools.css">
+    <link rel="manifest" href="./manifest.json">
+    <script src="./main.js"></script>
+    <meta Cache-Control: max-age=31536000>
+    <meta name="Description" content="Put your description here.">
+    <meta name="theme-color" content="#708090"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./Resources\Logos\Eldritch Ships Studios\apple-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Resources\Logos\Eldritch Ships Studios\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Resources\Logos\Eldritch Ships Studios\favicon-16x16.png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="topnav" id="myTopnav">
+            <a href="./index.html"><ion-icon name="home-outline"></ion-icon><h2>Home</h2></a>
+            <a href="./gallery.html"><ion-icon name="easel-outline"></ion-icon><h2>Gallery</h2></a>
+            <a href="./games.html"><ion-icon name="game-controller-outline"></ion-icon><h2>Games</h2></a>
+            <a href="./tools.html" class="active"><ion-icon name="cog-outline"></ion-icon><h2>Tools</h2></a>
+        </nav>
+    </header>
+<main>
+    <ul>
+        <li><h2>One Operation Calculator</h2>
+            <h3 id="screen"></h3>
+		    <table>
+                <tbody>
+                <tr class="orange">
+					<td onclick="clearScr()" class="orange">AC</td>
+				</tr>	
+				<tr>
+			    		<td onclick="sendNum('+')" class="orange">+</td>
+                        <td onclick="sendNum('1')">1</td>
+			    		<td onclick="sendNum('2')">2</td>
+			    		<td onclick="sendNum('3')">3</td>
+				</tr>
+				<tr>
+                    <td onclick="sendNum('-')" class="orange">-</td>
+					<td onclick="sendNum('4')">4</td>
+					<td onclick="sendNum('5')">5</td>
+					<td onclick="sendNum('6')">6</td>
+				</tr>
+				<tr>
+      				<td onclick="sendNum('*')" class="orange">x</td>
+                    <td onclick="sendNum('7')">7</td>
+					<td onclick="sendNum('8')">8</td>
+					<td onclick="sendNum('9')">9</td>
+				</tr>
+				<tr>
+      				<td onclick="sendNum('/')" class="orange">/</td>
+                    <td onclick="sendNum('.')">.</td>
+					<td onclick="sendNum('0')">0</td>
+					<td onclick="equalTo()" style="color:orangered;">=</td>
+				</tr>
+			</tbody>
+		</table>
+        </li>
+    </ul>
+  
+    <!--<h1>Color Picker</h1>
+	<div>
+		 To select the color 
+		Color Picker: <input type="color"
+			id="colorPicker" value="#6a5acd">-->
+
+		<!-- To display hex code of the color 
+		Hex Code: <input type="text" id="box">
+	</div>
+    <h1>Heredibility</h1>
+    <h1>Conversion</h1>-->
+</main>
+<footer>
+    <h2> <b>Eldritch Ships Studios</b> </h2>
+    <h3>  
+        <a href="mailto:LightningCog@eldritchships.com" target="_blank" rel="noopener" title="email"><ion-icon name="mail"></ion-icon></a>
+        <a href="https://discord.gg/87TSNSWUSm" target="_blank" rel="noopener" title="Discord"><ion-icon name="logo-discord"></ion-icon></a>
+        <a href="https://twitter.com/lightningcog_" target="_blank" rel="noopener" title="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="https://github.com/Eldritch-Ships-Studios" target="_blank" rel="noopener" title="Github"><ion-icon name="logo-github"></ion-icon></a>
+    </h3>
+</footer>
+<script src="./tools.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
