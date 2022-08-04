@@ -189,6 +189,9 @@ h2 {
 h3 {
     font-size: var(--fs-500);
 }
+h4 {
+    font-size: var(--fs-400);
+}
 li {
     list-style: none;
     align-items: center;
@@ -204,11 +207,11 @@ ion-icon {
     color: var(--clr-dark);
     font-size: var(--fs-600)
 }
-nav ion-icon {
+header nav ion-icon {
     position: relative;
     margin-top: .2em;
 }
-nav {
+header nav {
     display: flex;
     position: relative;
     min-width: fit-content;
@@ -223,7 +226,7 @@ nav {
     text-align: center;
     justify-self: center;
   }
-nav a{
+header nav a{
     display: inline;
     color: var(--clr-dark);
     background-color: var(--clr-light);
@@ -237,10 +240,24 @@ nav a{
     min-width: fit-content;
     min-height: fit-content;
   }
-nav a:hover {
+  nav {    
+    display: flex;
+    position: relative;
+    min-width: fit-content;
+    width: 35%;  
+    border-radius: 15%;
+    padding: 1em;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    min-width: fit-content;
+    height: 10%;
+    text-align: center;
+    justify-self: center;}
+header nav a:hover {
     background-color: var(--clr-white);
   }
-nav a.active {
+header nav a.active {
     background-color: var(--clr-white);
     color: var(--clr-dark);
   }
