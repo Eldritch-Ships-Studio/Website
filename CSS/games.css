@@ -1,40 +1,25 @@
-.javascriptGameInstrctions {
-    min-height: 10em;
-    padding: .1em;
-    background-color: var(--clr-accent);
-    font-size: 150%;
-    border-radius: 10%;
-}
-.javascriptGameInstrctions h2,h3,p {
-    margin: auto;
-    padding: .1em;
-    max-width: 35em;
-    max-width: auto;
-    font-size: 150%;
-}
-.javascriptGame {
-    min-height: 20em;
-}
 /*Memory Game*/
 #memGrid {
-    width: 24em;
-    aspect-ratio: 3/4;
+    width: 28em;
+    aspect-ratio: 4/3;
     display: flex;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    max-height: fit-content;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-height: 27em;
 }
 .memCard {
-    width: 8em;
-    height: 8em;
+    width: 7em;
+    height: 7em;
     margin: 0;
     border: .35em solid var(--clr-dark);
     border-radius: 10%;
 }
 /*Mole Game*/
 #moleGrid {
-    width: 30em;
+    width: 27em;
     display: flexbox;
     aspect-ratio: 1/1;
     margin-left: auto;
@@ -106,6 +91,7 @@
     flex-wrap:  wrap;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .connect4Grid div {
@@ -132,22 +118,19 @@
         padding: 0;
     }
     #memGrid {
-        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
         max-width: 100%;
     }
     .memCard {
-        max-width: 6em;
-        max-height: 6em;
+        max-width: 5em;
+        max-height: 5em;
     }
     #moleGrid {
-        max-width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        max-width: fit-content;
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
     }
     .moleHole {
-        max-width: 6em;
-        max-height: 6em;
-    }
-    .javascriptGame {
-        margin-left: 0;
+        max-width: 5em;
+        max-height: 5em;
     }
   }

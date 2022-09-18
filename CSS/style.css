@@ -193,7 +193,7 @@ a, h1, h2, h3, h4, h5, h6, p {
     color: var(--clr-dark);
 }
 h1 {
-    font-size: var(--fs-900);
+    font-size: var(--fs-800);
 }
 h2 {
     font-size: var(--fs-600);
@@ -314,9 +314,103 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     overflow: auto;
 }
-@media only screen and (max-width: 1100px) {
-    /* For mobile phones: */
-    ul {
-        grid-template-columns: repeat(auto-fit, minmax(75%, 1fr));
-    }
+hr {
+    border: .45em solid var(--clr-dark);
+    width: 100%;
+    margin: 1em;
+    /*border-radius: 10%/30%;*/
+}
+
+.game, .gallery {
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+    height: auto;
+}
+
+.accordion-select {
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    z-index: 1;
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+    width: 100%;
+    height: 65px;
+    font-size: 15px;
+    margin-bottom: -65px;
+    margin-right: 0;
+}
+
+.accordion-title {
+    position: relative;
+    background-color: var(--clr-accent);
+    color: #7f8787;
+    width: 100%;
+    height: 65px;
+    font-size: 15px;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+    border: 1px solid transparent;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.accordion-title span {
+    bottom: 0px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.accordion-content {
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+    transition: margin 0.3s ease 0.1s;
+}
+
+.accordion-select:checked + .accordion-title + .accordion-content {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+/* Generated styles starts here */
+
+.accordion-title:not(:nth-last-child(2))::after {
+    border-bottom: solid .2em var(--clr-dark);
+} 
+
+.accordion-select:hover + .accordion-title,
+.accordion-select:checked + .accordion-title {
+    background-color: var(--clr-accent);
+} 
+
+ .accordion-title span  {	
+    transform: rotate(0deg);
+    /*-ms-writing-mode: lr-tb;*/
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    padding-left: 33px;
+    padding-right: 33px;
+    line-height: 65px;
+} 
+
+.accordion-content {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    height: 32em;
+    margin-bottom: -32em;
+    margin-right: 0;
+    padding: 30px;
+    width: 100%;
 }
