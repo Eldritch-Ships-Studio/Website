@@ -136,6 +136,13 @@ select {
     margin: 0;
     padding: 0;
 }
+/*html {
+    max-width: 70ch;*//*
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
+  }*/
 body {
     background-color:var(--clr-light);
     margin: 0px;
@@ -172,6 +179,9 @@ main {
     padding-inline: 2em;
     margin-inline: auto;
     scroll-snap-type: y mandatory;
+    /*max-width: 38rem;
+    padding: 2rem;
+    margin: auto;*/
 }
 footer {
     position: relative;
@@ -408,8 +418,8 @@ hr {
 .accordion-content {
     background-color: var(--clr-light);
     color: var(--clr-dark);
-    height: 32em;
-    margin-bottom: -32em;
+    height: 25em;
+    margin-bottom: -25em;
     margin-right: 0;
     padding: 30px;
     width: 100%;
