@@ -418,8 +418,8 @@ hr {
 .accordion-content {
     background-color: var(--clr-light);
     color: var(--clr-dark);
-    height: 25em;
-    margin-bottom: -25em;
+    height: 28em;
+    margin-bottom: -28em;
     margin-right: 0;
     padding: 30px;
     width: 100%;
