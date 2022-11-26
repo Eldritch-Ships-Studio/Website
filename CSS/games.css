@@ -1,3 +1,28 @@
+/*:root {
+     colors *//*
+    --clr-dark: midnightblue;
+    --clr-light: cornflowerblue;
+    --clr-white: powderblue;
+    --clr-accent: deepskyblue;
+}*/
+
+/* remove animations for people who've turned them off */
+/*@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    
+  }
+}
+*{
+    display: flexbox;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+}*/
 /*Memory Game*/
 #memGrid {
     width: 28em;
@@ -9,6 +34,11 @@
     margin-top: 0;
     margin-bottom: 0;
     max-height: 27em;
+
+    display: flexbox;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 .memCard {
     width: 7em;
