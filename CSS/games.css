@@ -1,10 +1,10 @@
-/*:root {
-     colors *//*
+:root {
+    /* colors */
     --clr-dark: midnightblue;
     --clr-light: cornflowerblue;
     --clr-white: powderblue;
     --clr-accent: deepskyblue;
-}*/
+}
 
 /* remove animations for people who've turned them off */
 /*@media (prefers-reduced-motion: reduce) {  
@@ -58,9 +58,9 @@
 .moleHole {
     width: 8em;
     height: 8em;
-    border: .35em solid var(--clr-dark);
+    border: .35em solid var(--clr-light);
     display: inline-flex;
-    color: var(--clr-dark);
+    color: var(--clr-light);
     border-radius: 10%;
 }
 .mole {
@@ -115,6 +115,7 @@
 /*Connect 4*/
 .connect4Grid {
     border: solid .35em var(--clr-dark);
+    background-color: var(--clr-light);
     height: 13em;
     width: 15em;
     display: flex;
@@ -135,7 +136,7 @@
 }
 
 .connect4Player-two {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-accent);
     border-radius: 1em;
 }
 @media only screen and (max-width: 550px) {

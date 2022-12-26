@@ -1,5 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
 
+  html {
+	font-family: 'Mona Sans';
+  }
+  h1,h2,h3,h4,h5,h6,a {
+	font-family: 'Hubot Sans';
+  }
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -16,7 +21,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	font-family: 'Mona Sans';}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -84,6 +90,7 @@ nav a {
 
 	html {
 		box-sizing: border-box;
+		background-color: #252122;
 	}
 
 	*, *:before, *:after {
@@ -91,9 +98,8 @@ nav a {
 	}
 
 	body {
-		background: #252122;
-		background-image: url("images/bg02.png");
-		background-color: midnightblue;
+		background-color: #252122;
+		/*background-color: midnightblue;*/
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -110,7 +116,7 @@ nav a {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
-		color: #5d5d5d;
+		color: powderblue;
 		font-size: 14pt;
 		line-height: 1.75em;
 	}
@@ -191,6 +197,15 @@ nav a {
 		margin-right: auto;
 	}
 	ul, li {list-style-type: none;}
+	section.box, section h3, section b, section span, section h4{
+		background-color: midnightblue;
+		color: powderblue;
+	}
+	.first, .middle, .last, row{
+		background-color: midnightblue;
+		color: powderblue;
+	}
+
 
 /* Container */
 
@@ -1633,7 +1648,7 @@ nav a {
 		color: Snow !important;
 		font-weight: 700;
 		outline: 0;
-		font-size: 1.1em;
+		font-size: 1em;
 		padding: 0.65em 1.5em 0.65em 1.5em;
 		text-align: center;
 		-moz-transition: background-color .25s ease-in-out;
@@ -1942,52 +1957,12 @@ nav a {
 					line-height: 1.5em;
 				}
 
-				ul.social li a.fa-facebook {
-					background: #3c5a98;
-				}
-
-					ul.social li a.fa-facebook:hover {
-						background: #4c6aa8;
-					}
-
-				ul.social li a.fa-twitter {
-					background: #2daae4;
-				}
-
-					ul.social li a.fa-twitter:hover {
-						background: #3dbaf4;
-					}
-
-				ul.social li a.fa-dribbble {
-					background: #c4376b;
-				}
-
-					ul.social li a.fa-dribbble:hover {
-						background: #d4477b;
-					}
-
 				ul.social li a.fa-linkedin {
 					background: #006599;
 				}
 
 					ul.social li a.fa-linkedin:hover {
 						background: #1075a9;
-					}
-
-				ul.social li a.fa-tumblr {
-					background: #2b4661;
-				}
-
-					ul.social li a.fa-tumblr:hover {
-						background: #3b5671;
-					}
-
-				ul.social li a.fa-google-plus {
-					background: #da2713;
-				}
-
-					ul.social li a.fa-google-plus:hover {
-						background: #ea3723;
 					}
 
 /* Icons */
@@ -2081,14 +2056,14 @@ nav a {
 
 	#header {
 		position: relative;
-		background: #ffffff;
+		background: #252122;
 		border-bottom: solid 1px #ccc;
 		padding: 5em 0 4em 0;
 		text-align: center;
 	}
 
 		#header h1 {
-			color: #252122;
+			color: powderblue;
 			font-weight: 900;
 			font-size: 2.5em;
 			letter-spacing: -0.035em;
@@ -2254,7 +2229,7 @@ nav a {
 				top: 0;
 				display: block;
 				z-index: -1;
-				box-shadow: 32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, 32px 32px 0 0 #fff, 32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
+				/*box-shadow: 32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, 32px 32px 0 0 #fff, 32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);*/
 			}
 
 			#intro .middle:after {
@@ -2266,7 +2241,7 @@ nav a {
 				top: 0;
 				display: block;
 				z-index: -1;
-				box-shadow: -32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, -32px 32px 0 0 #fff, -32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
+				/*box-shadow: -32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, -32px 32px 0 0 #fff, -32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);*/
 			}
 
 		#intro .button {
@@ -2281,7 +2256,6 @@ nav a {
 
 	#main {
 		position: relative;
-		background: #f7f7f7 url("images/bg02.png");
 		padding: 4em 0 4em 0;
 	}
 
@@ -2291,14 +2265,9 @@ nav a {
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url("images/bg01.png");
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.1;
-		}
-
-		#main .major h2 {
-			background: #f7f7f7 url("images/bg02.png");
 		}
 
 /* Footer */
@@ -2315,7 +2284,6 @@ nav a {
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url("images/bg01.png");
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.5;
@@ -2646,7 +2614,6 @@ nav a {
 				width: 275px;
 				z-index: 10002;
 				color: #858484;
-				background-image: url("images/bg02.png");
 				box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
 			}
 
