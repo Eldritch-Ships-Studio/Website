@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--Metadata-->
     <title>Eldritch Ships Studio</title>
-	<meta author="Lee Simmons">
-	<meta Cache-Control: max-age=31536000>
-    <meta name="Description" content="Eldritch Ships Studio">
-    <meta name="theme-color" content="#708090"/>
-	<meta name="color-scheme" content="dark"/>
-	<!---CSS-->
+    <!-- <link rel="stylesheet" href="./CSS/style.css"> -->
 	<link rel="stylesheet" href="./CSS/style.css"/>
     <link rel="stylesheet" href="./CSS/games.css">
-	<!--JS Preload-->
     <link rel="manifest" href="./manifest.json">
-    <script src="./service-worker.js"></script>
-	<!--Favicon-->
+    <script src="./JS/main.js"></script>
+    <script src="./JS/service-worker.js"></script>
+    <meta Cache-Control: max-age=31536000>
+    <meta name="Description" content="Eldritch Ships Studio">
+    <meta name="theme-color" content="#708090"/>
     <link rel="apple-touch-icon" sizes="180x180" href="./Resources\Logos\Eldritch Ships Studios\apple-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./Resources\Logos\Eldritch Ships Studios\favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./Resources\Logos\Eldritch Ships Studios\favicon-16x16.png">
-	<!--Font-->
-	<link rel="preload" href="Resources/Fonts/Mona.Sans.1.0/Mona Sans/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="Resources/Fonts/Hubot.Sans.1.0/Hubot Sans/Hubot-Sans.woff2" as="font" type="font/woff2" crossorigin>
-	<!--Ionic Icons-->	
-	<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+	<meta name="color-scheme" content="dark" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 			<section id="header">
-				<img src="./Resources/Logos/Eldritch Ships Studios/EldritchShipsLogo.svg">
-				<h1>Eldritch Ships Studios</h1>
+				<h1><a href="index.html">Eldritch Ships Studios</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="#Gallery">Gallery</a></li>
+						<li><a href="#Games">Games</a></li>
+						<li><a href="#Stream">Stream</a></li>
+					</ul>
+				</nav>
 				<!-- Intro -->
 				<section id="intro" class="container">
 				<div class="row">
 					<div class="col-4 col-12-medium">
 					<section class="first">
 						<header>
-							<a href="#Gallery"><h1>Gallery</h1></a>
+							<h2>Gallery</h2>
 						</header>
 						<p>3D models made with Blender. Unless attributed to other parties, works are public domain to be used as you wish. Two of the videos use music from the artists, <a href="https://sonnyboy93.bandcamp.com/"><b>sonnyboy93</b></a> and <a href="https://lonepeakmusic.bandcamp.com/"><b>Lone Peak Music</b></a>, both of which can be found on their bandcamps.</p>
 						<i class="icon solid featured fa-cog"></i>
@@ -47,18 +53,18 @@
 					<div class="col-4 col-12-medium">
 					<section class="middle">
 						<header>
-							<a href="#Games"><h1>Games</h1></a>
+							<h2>Games</h2>
 						</header>
-						<p>A sample of games written in Javascript. The current selection includes; <a href="#Rock,Paper,Scissors">Rock, Paper, Scissors</a>, <a href="#Memory">Memory</a>, <a href="#WhacaMole">Whac a Mole</a>, <a href="#Frogger">Frogger</a>, and <a href="#Connect4">Connect 4</a>.</p>
+						<p>Games written in Javascript</p>
 						<i class="icon solid featured alt fa-bolt"></i>
 					</section>
 					</div>
 					<div class="col-4 col-12-medium">
 					<section class="last">
 						<header>
-							<a href="#Stream"><h1>Stream</h1></a>
+							<h2>Stream</h2>
 						</header>
-						<p>My live stream of videogame playthroughs, devlogs, and speedrunning attempts on <a href="https://www.twitch.tv/lightningcog">Twitch</a>. Alongside recordings of previous streams on <a href="https://www.youtube.com/channel/UCcYjAOWxGSd-RWt2jJTY92Q">Youtube</a></p>
+						<p>Live stream on Twitch</p>
 						<i class="icon solid featured alt2 fa-star"></i>
 					</section>
 					</div>
@@ -244,8 +250,9 @@
 				<div class="row">
 					<div class="col-6 col-12-small">
 					<section class="box">
+					<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 						<header>
-							<h3 id="Rock,Paper,Scissors">Rock, Paper, Scissors</h3>
+							<h3>Rock, Paper, Scissors</h3>
 						</header>
 						<ul>
 							<li>
@@ -267,8 +274,9 @@
 					</div>
 					<div class="col-6 col-12-small">
 						<section class="box">
+						<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 							<header>
-								<h3 id="Memory">Memory</h3>
+								<h3>Memory</h3>
 							</header>
 							<ul>
 								<li>
@@ -284,8 +292,9 @@
 					</div>
 					<div class="col-6 col-12-small">
 						<section class="box">
+						<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 							<header>
-								<h3 id="WhacaMole">Whac a Mole</h3>
+								<h3>Whac a Mole</h3>
 							</header>
 							<ul>
 								<li>
@@ -315,8 +324,9 @@
 					</div>
 					<div class="col-6 col-12-small">
 						<section class="box">
+						<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 							<header>
-								<h3 id="Frogger">Frogger</h3>
+								<h3>Frogger</h3>
 							</header>
 							<ul>
 								<li>
@@ -419,8 +429,9 @@
 					</div>
 					<div class="col-6 col-12-small">
 						<section class="box">
+						<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 							<header>
-								<h3 id="Connect4">Connect 4</h3>
+								<h3>Connect 4</h3>
 							</header>
 							<ul>
 								<li>
@@ -523,6 +534,7 @@
                                                 <div class="row">
                                                     <div class="col-6 col-12-small">
                                                         <section class="box">
+                                                            <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
                                                             <header>
                                                                 <h3>Live Stream</h3>
                                                             </header>
@@ -544,6 +556,7 @@
                                                     </div>
                                                     <div class="col-6 col-12-small">
                                                         <section class="box">
+                                                            <a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
                                                             <header>
                                                                 <h3>Previous Streams</h3>
                                                             </header>
@@ -569,6 +582,7 @@
 
 							</div>
 							<div class="col-12">
+
 								<!-- Copyright -->
 									<div id="copyright">
 										<ul class="links">
@@ -581,6 +595,7 @@
 											</nav>
 										</ul>
 									</div>
+
 							</div>
 						</div>
 					</div>
