@@ -1,5 +1,5 @@
 
-  html {
+html {
 	font-family: 'Mona Sans';
   }
   h1,h2,h3,h4,h5,h6,a {
@@ -90,7 +90,7 @@ nav a {
 
 	html {
 		box-sizing: border-box;
-		background-color: #252122;
+		background-color: #31b0d5;
 	}
 
 	*, *:before, *:after {
@@ -98,8 +98,8 @@ nav a {
 	}
 
 	body {
-		background-color: #252122;
-		/*background-color: midnightblue;*/
+		/*background-color: #252122;*/
+		background-color: #006599;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -206,8 +206,8 @@ nav a {
 		color: powderblue;
 	}
 	#Gallery.major h2, #Games.major h2, #Stream.major h2{
-		background-color: #252122;
-		color: powderblue;
+		background-color: #31b0d5;
+		color: midnightblue;
 		font-size: 300%;
 	}
 
@@ -2062,14 +2062,14 @@ nav a {
 
 	#header {
 		position: relative;
-		background: #252122;
+		background: #31b0d5;
 		border-bottom: solid 1px #ccc;
 		padding: 5em 0 4em 0;
 		text-align: center;
 	}
 
 		#header h1 {
-			color: powderblue;
+			color: midnightblue;
 			font-weight: 900;
 			font-size: 2.5em;
 			letter-spacing: -0.035em;
@@ -2837,7 +2837,7 @@ nav a {
 			}
 
 				#header h1 {
-					color: powderblue;
+					color: midnightblue;
 					font-weight: 900;
 					font-size: 1.75em;
 					letter-spacing: -0.035em;

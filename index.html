@@ -8,7 +8,7 @@
 	<meta property="og:title" content="Eldritch Ships Studios" />
 	<meta author="Lee Simmons">
 	<meta Cache-Control: max-age=31536000>
-    <meta name="Description" content="Eldritch Ships Studio">
+    <meta name="Description" content="Eldritch Ships Studios">
 	<meta property="og:description" 
   content="Art and games from Eldritch Ships Studios"/>
     <meta name="theme-color" content="#708090"/>
@@ -31,11 +31,14 @@
 	<!--Ionic Icons-->	
 	<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+	<!--PWA-->
+	<script>navigator.serviceWorker.register("service-worker.js")</script> 
+	<link rel="manifest" href="manifest.json" />	
 </head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 			<section id="header">
-				<img src="./Resources/Logos/Eldritch Ships Studios/EldritchShipsLogo.svg">
+				<img src="./Resources/Logos/EldritchShipsStudios/EldritchShipsLogo.svg">
 				<h1>Eldritch Ships Studios</h1>
 				<!-- Intro -->
 				<section id="intro" class="container">
@@ -591,23 +594,6 @@
 					</div>
 			</section>
 		</div>
-	<!--Pokemon Heritability Rules
-	Balls 
-	50%, unless ditto, no cherish or master
-	Nature 100% everstone mother
-	Hidden ability mother passes father passes 60%, 20%,20% Regular abilities 80% chance of mother Genderless 60%
-	Moves
-	Lv 1 moveset
-	Both parents know a level up move
-	Egg moves
-	Volt tackle
-	If this would result in the baby possessing more than four moves, the moves take priority in the order listed: Volt Tackle, mother's Egg Moves, father's Egg Moves, TM and HM moves, inherited level-up moves, baby's default moveset. The moves passed down will be ordered on the baby Pokémon by the priority listed above
-	Regional Form Everstone mother, or father with ditto
-	Baby forms
-	Gen three and four incense 
-	IV Held items to pass one
-	Knot to pass 5
-	Shiny Masuda method gives an extra 6 shiny roll 6/4096 Shiny charm 2/4096 8/4096=1/512-->
 		<!-- Scripts -->
 		<script src="JS\main.js"></script>
 		<script src="JS\games.js"></script>
