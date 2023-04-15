@@ -64,7 +64,7 @@
     border-radius: 10%;
 }
 .mole {
-    background-image: url(../Resources/Logos/Eldritch%20Ships%20Studios/EldritchShipsLogo.svg);
+    background-image: url(../Resources/Logos/EldritchShipsStudios/EldritchShipsLogo.svg);
     background-size: cover;
     border: .35em solid var(--clr-white);
 }
