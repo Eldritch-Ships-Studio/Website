@@ -1,5 +1,3 @@
-
-
 # Eldritch Ships Studios
 ![Eldritch Ships Logo](https://www.eldritchships.com/Resources/Logos/EldritchShipsStudios/EldritchShipsLogo.svg)
 Eldritch Ships Studios is a freelance 3d art & game studio.
