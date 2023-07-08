@@ -163,7 +163,6 @@ function flipCard() {
         setTimeout((checkMatch),500);
     }
 }
-
 //Whack a Mole https://github.com/kubowania/whac-a-mole
 const holes = document.querySelectorAll('.moleHole');
 const mole = document.querySelector('.mole');

@@ -1,28 +1,7 @@
-:root {
-    /* colors */
-    --clr-dark: midnightblue;
-    --clr-light: cornflowerblue;
-    --clr-white: powderblue;
-    --clr-accent: deepskyblue;
+.rules button, .game button {
+    max-width: 8em;
+    color: var(--clr-dark);
 }
-
-/* remove animations for people who've turned them off */
-/*@media (prefers-reduced-motion: reduce) {  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    
-  }
-}
-*{
-    display: flexbox;
-    flex: 0 1 auto;
-    flex-wrap: wrap;
-    flex-direction: row;
-}*/
 /*Memory Game*/
 #memGrid {
     width: 28em;
@@ -41,8 +20,8 @@
     flex-direction: row;
 }
 .memCard {
-    width: 7em;
-    height: 7em;
+    width: 4em;
+    height: 4em;
     margin: 0;
     border: .35em solid var(--clr-dark);
     border-radius: 10%;
@@ -54,10 +33,11 @@
     aspect-ratio: 1/1;
     margin-left: auto;
     margin-right: auto;
+    cursor:url(../Resources/icons/hammer-outline.svg);
 }
 .moleHole {
-    width: 8em;
-    height: 8em;
+    width: 5em;
+    height: 5em;
     border: .35em solid var(--clr-light);
     display: inline-flex;
     color: var(--clr-light);
