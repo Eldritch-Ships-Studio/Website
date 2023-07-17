@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg width="128.0px" height="128.0px" viewBox="0 0 128.0 128.0" version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg">
+  <title>bimi-svg-tiny-12-ps</title>
+  <defs id="defs10"/>
+  <g id="layer1">
+    <ellipse id="path901" cx="64.000008" cy="89" rx="39.33873" ry="13.338726" fill="#708090" stroke="#000000" stroke-width="1.32255" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1" fill-opacity="1"/>
+    <ellipse id="path833" cx="64" cy="64" rx="63.468754" ry="31.468754" fill="#708090" stroke="#000000" stroke-width="1.06249" stroke-miterlimit="4" stroke-dasharray="none" fill-opacity="1"/>
+    <ellipse id="path26" ry="23.458834" rx="39.458832" cy="42.000004" cx="64" fill="#00ffff" fill-opacity="1" fill-rule="evenodd" stroke="#000000" stroke-width="1.08234" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path1444-3" cx="46.999996" cy="77" rx="6.4715977" ry="6.4715981" fill="#6a5acd" fill-opacity="1" stroke="#000000" stroke-width="1.0568" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path1444-6" cx="77" cy="77" rx="6.4715977" ry="6.4715981" fill="#6a5acd" fill-opacity="1" stroke="#000000" stroke-width="1.0568" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path1444-7" cx="101" cy="71" rx="5.5470819" ry="5.5470839" fill="#6a5acd" fill-opacity="1" stroke="#000000" stroke-width="0.905832" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <ellipse id="path1444-35" cx="9.999999" cy="55.000008" rx="4.6225696" ry="4.6225681" fill="#6a5acd" fill-opacity="1" stroke="#000000" stroke-width="0.754864" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <circle id="path1444" cx="26" cy="71" r="5.5470839" fill="#6a5acd" fill-opacity="1" stroke="#000000" stroke-width="0.905832" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+    <circle id="path1444-5" cx="115" cy="55" r="4.62257" fill="#6a5acd" fill-opacity="1" stroke="#000000" stroke-width="0.75486" stroke-miterlimit="4" stroke-dasharray="none" stroke-opacity="1"/>
+  </g>
+</svg>
