@@ -147,7 +147,6 @@ select {
 body {
     background-color:var(--clr-light);
     margin: 0px;
-    font-family: var(--ff-sans-normal);
     font-size: var(--fs-400);
     color: hsl( var(--clr-white) );
     background-color: hsl( var(--clr-dark) );
