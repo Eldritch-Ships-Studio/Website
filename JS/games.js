@@ -52,6 +52,7 @@ function getResult() {
       rpsResultDisplay.innerHTML = result
 }
 //Memory https://github.com/kubowania/memory-game
+/*
 const cardArray = [
     {
         name: 'cheeseburger',
@@ -162,7 +163,7 @@ function flipCard() {
     if (cardsChosen.length ===2) {
         setTimeout((checkMatch),500);
     }
-}
+}*/
 //Whack a Mole https://github.com/kubowania/whac-a-mole
 const holes = document.querySelectorAll('.moleHole');
 const mole = document.querySelector('.mole');

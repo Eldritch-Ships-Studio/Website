@@ -28,12 +28,12 @@
 }
 /*Mole Game*/
 #moleGrid {
-    width: 27em;
+    width: 18em;
     display: flexbox;
     aspect-ratio: 1/1;
     margin-left: auto;
     margin-right: auto;
-    cursor:url(../Resources/icons/hammer-outline.svg);
+    cursor:url(../Resources/icons/hammer-outline.svg), auto;
 }
 .moleHole {
     width: 5em;
@@ -44,7 +44,7 @@
     border-radius: 10%;
 }
 .mole {
-    background-image: url(../Resources/Logos/EldritchShipsStudios/EldritchShipsLogo.svg);
+    background-image: url(../Resources/icons/eldritchShipsStudios/EldritchShipsLogo.svg);
     background-size: cover;
     border: .35em solid var(--clr-white);
 }
