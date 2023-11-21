@@ -1,0 +1,147 @@
+.rules button, .game button {
+    max-width: 8em;
+    color: midnightblue;
+}
+/*Memory Game*/
+#memGrid {
+    width: 28em;
+    aspect-ratio: 4/3;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-height: 27em;
+
+    display: flexbox;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.memCard {
+    width: 4em;
+    height: 4em;
+    margin: 0;
+    border: .35em solid midnightblue);
+    border-radius: 10%;
+}
+/*Mole Game*/
+#moleGrid {
+    width: 18em;
+    display: flexbox;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    margin-right: auto;
+    cursor:url(../../images/icons/hammer-outline.svg), auto;
+}
+.moleHole {
+    width: 5em;
+    height: 5em;
+    border: .35em solid cornflowerblue;
+    display: inline-flex;
+    color: var(--clr-light);
+    border-radius: 10%;
+}
+.mole {
+    background-image: url(../../images/icons/eldritchShipsStudios/EldritchShipsLogo.svg);
+    background-size: cover;
+    border: .35em solid aliceblue;
+}
+
+/*Frogger Game*/
+.frogGrid {
+    border: .35em solid midnightblue;
+    height: 20em;
+    width: 20em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frogGrid div {
+    height: 2em;
+    width: 2em;
+    border-radius: 10%;
+}
+
+.ending-block {
+    background-color: gold;
+}
+
+.starting-block {
+    background-color: violet;
+}
+.l1, .l2, .l3 {
+    background-color: brown;
+}
+
+.l4, .l5 {
+    background-color: cornflowerblue;
+}
+
+.c1 {
+    background-color: cornflowerblue;
+}
+
+.c2, .c3 {
+    background-color: brown;
+}
+
+.frog {
+    background-color: green;
+}
+/*Connect 4*/
+.connect4Grid {
+    border: solid .35em midnightblue;
+    background-color: cornflowerblue;
+    height: 13em;
+    width: 15em;
+    display: flex;
+    flex-wrap:  wrap;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.connect4Grid div {
+    height: 2em;
+    width: 2em;
+}
+
+.connect4Player-one {
+    background-color: aliceblue;
+    border-radius: 1em;
+}
+
+.connect4Player-two {
+    background-color: skyblue;
+    border-radius: 1em;
+}
+@media only screen and (max-width: 550px) {
+    /* For mobile phones: */
+    main {
+        padding: 0;
+    }
+    ul {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        padding: 0;
+    }
+    #memGrid {
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+        max-width: 100%;
+    }
+    .memCard {
+        max-width: 5em;
+        max-height: 5em;
+    }
+    #moleGrid {
+        max-width: fit-content;
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    }
+    .moleHole {
+        max-width: 5em;
+        max-height: 5em;
+    }
+  }

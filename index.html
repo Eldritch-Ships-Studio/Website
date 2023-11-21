@@ -1,481 +1,504 @@
 <!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--Metadata-->
-    <title>Eldritch Ships Studio</title>
-	<meta property="og:title" content="Eldritch Ships Studios" />
-	<meta Cache-Control: max-age=31536000>
-    <meta name="Description" content="Eldritch Ships Studios">
-	<meta property="og:description" content="Art and games from Eldritch Ships Studios"/>
-    <meta name="theme-color" content="#708090"/>
-	<meta name="color-scheme" content="dark"/>
-	<meta property="og:url" content="https://www.EldritchShips.com" />
-	<meta property="og:image" content="./Resources/Logos/Eldritch Ships Studios/EldritchShipsLogo.svg"/>
-	<!---CSS-->
-	<link rel="stylesheet" href="./CSS/style.css"/>
-    <link rel="stylesheet" href="./CSS/games.css"/>
-	<!--JS Preload-->
-    <link rel="manifest" href="./manifest.json">
-    <script src="./service-worker.js"></script>
-    <!--Ionic Icons-->	
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	<!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="./Resources\icons\eldritchShipsStudios\apple-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./Resources\icons\eldritchShipsStudios\\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./Resources\icons\eldritchShipsStudios\\favicon-16x16.png">
-	<!--Font-->
-	<link rel="preload" href="Resources/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="Resources/fonts/Hubot-Sans.woff2" as="font" type="font/woff2" crossorigin>
-	<!--PWA-->
-	<script>navigator.serviceWorker.register("service-worker.js")</script> 
-	<link rel="manifest" href="manifest.json" />	
-</head>
-<body>
-    <header>
-        <!--<nav class="topNav">
-            <a href="#topNav"></a>
-            <a href="#gallery"></a>        
-            <a href="#game"></a>
-        </nav>-->
-        <img src="Resources/icons/eldritchShipsStudios/EldritchShipsLogo.svg">
-		<h1>Eldritch Ships Studios</h1>
-    </header>
-    <main>
-        <div class="tab-frame">
-            <input type="radio" checked name="tab" id="tab1">
-            <label for="tab1"><ion-icon name="easel-outline"></ion-icon><h2>Gallery</h2></label>
-    
-            <input type="radio" name="tab" id="tab2">
-            <label for="tab2"><ion-icon name="game-controller-outline"></ion-icon><h2>Games</h2></label>
-            
-            <input type="radio" name="tab" id="tab3">
-            <label for="tab3"><ion-icon name="tv-outline"></ion-icon><h2>Stream</h2></label>
- 
-            <div class="tab">
-				<h2>Gallery</h2>
-				<p>3D models made with blender. Unless attributed to other parties, works are public domain to be used as you wish. Two of the videos use music from the artists, <a href="https://sonnyboy93.bandcamp.com/">sonnyboy93</a> and <a href="https://lonepeakmusic.bandcamp.com">Lone Peak Music</a>, both of which can be found on their bandcamps.</p>
-				<ul>
-					<li>
-						<h3>Vapour Loops</h3>
-						<video width="852" height="480" controls playsinline loop  preload="metadata" poster="./Resources/blender/Vapour Loops.webp">
-							<source src="/Resources/blender/Vapour Loops.webm" type="video/webm">
-							<source src="/Resources/blender/Vapour Loops.mp4" type="video/mp4">
-							Your browser does not support the video tag.</video>
-						<p>Music Provided & Produced by <a class="external" href="https://soundcloud.com/sonnyboy93/vapourloop/s-DCpltWoJ9lb"><b>sonnyboy93</b></a></p>
-						<a href="./Resources/blender/Vapour Loops.blend"  download="Vapour Loops.blend"><button class="button alt">Blend File</button></a>
-						<a href="./Resources/blender/Vapour Loops.mp4" download="Vapour Loops.mp4"><button class="button alt">1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Countdown 314</h3>
-						<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./Resources/blender/Countdown 314.webp">
-                            <source src="./Resources/blender/Countdown 314(compressed).mp4" type="video/mp4">
-                            Your browser does not support the video tag.</video>
-						<p>A countdown from 3:14 to 0</p>
-						<a href="./Resources/Countdown 314.blend" download="Countdown 314.blend"><button class="button alt">Blend File</button></a>
-						<a href="./Resources/blender/Countdown 314(compressed).mp4" download="Countdown 314.mp4"><button class="button alt">1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Vaporwave Mountains</h3>
-						<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./Resources/blender/Vaporwave Mountains.webp">
-							<source src="./Resources/blender/Vaporwave Mountains.webm" type="video/webm">
-                            <source src="./Resources/blender/Vaporwave Mountains.mp4" type="video/mp4">
-							Your browser does not support the video tag.</video>
-						<p>Mountain animation with a vaporwave aesthetic</p>
-						<a href="./Resources/Countdown 314.blend" download="Countdown 314.blend"><button class="button alt">Blend File</button></a>
-						<a href="./Resources/blender/Countdown 314(compressed).mp4" download="Countdown 314.mp4"><button class="button alt">1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Light Tunnel</h3>
-						<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./Resources/blender/Light Tunnel.webp">
-                            <source src="./Resources/blender/Light Tunnel.webm" type="video/webm">
-                            <source src="./Resources/blender/Light Tunnel.mp4" type="video/mp4">
-                            Your browser does not support the video tag.</video>
-						<p></p>
-						<a href="./Resources/blender/Light Tunnel.blend" download="Light Tunnel.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/Light Tunnel.mp4" download="Light Tunnel.mp4"><button>1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Sand River</h3>
-						<video width="852" height="480" controls playsinline loop preload="metadata" poster="./Resources/blender/Sand River.webp">
-                            <source src="./Resources/blender/Sand River(Compressed).mp4" type="video/mp4">
-                            Your browser does not support the video tag.</video>
-						<p>Music Provided & Produced by <a class="external" href="https://lonepeakmusic.bandcamp.com/track/sand-river-guitar-version"><b>Lone Peak Music</b></a></p>
-						<a href="./Resources/blender/Sand River.blend" download="Sand River.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/Sand River(Compressed).mp4" download="Sand River.blend"><button>1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Purple Tunnel</h3>
-						<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./Resources/blender/Purple Tunnel.webp">
-                            <source src="./Resources/blender/Purple Tunnel.webm" type="video/webm">
-                            <source src="./Resources/blender/Purple Tunnel.mp4" type="video/mp4">
-                            Your browser does not support the video tag.</video>
-						<p></p>
-						<a href="./Resources/blender/Purple Tunnel.blend" download="Purple Tunnel.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/Purple Tunnel.mp4" download="Purple Tunnel.mp4"><button>1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Blue Cube</h3>
-						<img src="./Resources/blender/Blue Cube.webp" width="852" height="480" alt="Blue Cube">
-						<p></p>
-						<a href="./Resources/blender/Blue Cube.blend" download="Blue Cube.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/Blue Cube.png" download="Blue Cube.png"><button>1920x1080</button></a>
-					</li>
-					<li>
-						<h3>🅱️epsi Man Can</h3>
-						<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./Resources/blender/🅱️epsi Man Can.webp">
-                            <source src="./Resources/blender/🅱️epsi Man Can.webm" type="video/webm">
-                            <source src="./Resources/blender/🅱️epsi Man Can.mp4" type="video/mp4">
-                            Your browser does not support the video tag.</video>
-						<p>Pepsi Man as an aluminum can texture</p>
-						<a href="./Resources/blender/🅱️epsi Man Can.blend" download="🅱️epsi Man Can.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/🅱️epsi Man Can.mp4" download="🅱️epsi Man Can.mp4"><button>1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Hyperspace Card</h3>
-						<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./Resources/blender/Hyperspace Card.webp">
-                            <source src="./Resources/blender/Hyperspace Card.webm" type="video/webm">
-                            <source src="./Resources/blender/Hyperspace Card.mp4" type="video/mp4">
-                            Your browser does not support the video tag.</video>
-						<p></p>
-						<a href="./Resources/blender/Hyperspace Card.blend" download="Hyperspace Card.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/Hyperspace Card.mp4" download="Hyperspace Card.mp4"><button>1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Cog Spin</h3>
-						<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./Resources/blender/Cog Spin.webp">
-                            <source src="./Resources/blender/Cog Spin.webm" type="video/webm">
-                            <source src="./Resources/blender/Cog Spin.mp4" type="video/mp4">
-                            Your browser does not support the video tag.</video>
-						<p></p>
-						<a href="./Resources/blender/Cog Spin.blend" download="Cog Spin.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/Cog Spin.mp4" download="Cog Spin.mp4"><button>1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Library</h3>
-						<img src="./Resources/blender/Library.webp" width="852" height="480" alt="Library">
-						<p>A calm reading environment</p>
-						<a href="./Resources/blender/Library.blend" download="Library.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/Library.png" download="Library.png"><button>1920x1080</button></a>
-					</li>
-					<li>
-						<h3>Breakfast</h3>
-						<img src="./Resources/blender/Breakfast.webp" width="852" height="480" alt="Breakfast">
-						<p></p>
-                        <a href="./Resources/blender/Breakfast.blend" download="Breakfast.blend"><button>Blend File</button></a>
-                        <a href="./Resources/blender/Breakfast.png" download="Breakfast.png"><button>1920x1080</button></a>
-					</li>
-				</ul>
-			</div>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Metadata-->
+		<title>Eldritch Ships Studios</title>
+		<meta property="og:title" content="Eldritch Ships Studios" />
+		<meta Cache-Control: max-age=31536000>
+		<meta name="Description" content="Eldritch Ships Studios">
+		<meta property="og:description" content="Art and games from Eldritch Ships Studios"/>
+		<meta name="theme-color" content="#708090"/>
+		<meta name="color-scheme" content="dark"/>
+		<meta property="og:url" content="https://www.EldritchShips.com" />
+		<meta property="og:image" content="images/icons/eldritchShipsStudios/EldritchShipsLogo.svg"/>
+		<!---CSS-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--<link rel="stylesheet" href="./CSS/style.css"/>-->
+		<link rel="stylesheet" href="assets/css/games.css"/>
+		<!--JS Preload-->
+		<link rel="manifest" href="./manifest.json">
+		<script src="./service-worker.js"></script>
+		<!--Ionic Icons-->	
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<!--Favicon-->
+		<link rel="apple-touch-icon" sizes="180x180" href="images/icons/eldritchShipsStudios/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/icons/eldritchShipsStudios/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/icons/eldritchShipsStudios/favicon-16x16.png">
+		<!--Font-->
+		<link rel="preload" href="assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="assets/fonts/Hubot-Sans.woff2" as="font" type="font/woff2" crossorigin>
+		<!--PWA-->
+		<script>navigator.serviceWorker.register("service-worker.js")</script> 
+		<link rel="manifest" href="manifest.json" />
+	</head>
+	<body class="is-preload">
 
-            <div class="tab">
-                <h2>Games</h2>
-                <p>A sample of games written in Javascript. The current selection includes; Rock, Paper, Scissors, Whac a Mole, Frogger, and Connect 4.</p>
-				<ul>
-                    <li>
-                        <iframe frameborder="0" src="https://itch.io/embed/2231315?border_width=5&amp;border_color=e53b44" width="560" height="175"><a href="https://eldritchships.itch.io/pong">Pong by Eldritch Ships Studios</a></iframe> 
-                    </li>
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="logo">
+					<img src="images/icons/eldritchshipsstudios/EldritchShipsLogo.svg">
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Eldritch Ships Studios</h1>
+						<p>Freelance 3-D art and game studio</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#About">About</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+						<li><a href="#games">Games</a></li>
+						<li><a href="#stream">Stream</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- About -->
+				<article id="About">
+					<h2 class="major">About</h2>
+					<p>Eldritch Ships Studios is a passion project born from the lockdowns avoiding the COVID-19 pandemic and a fascination with visual arts and the open source software that creates them.</p>
+					<ul class="icons">
+						<li><a href="mailto:LightningCog@eldritchships.com" target="_blank" rel="noopener" title="email"><span class="label"><ion-icon name="mail"></ion-icon></span></a></li>
+						<li><a href="https://discord.gg/s2VrDD9fGK" class="social-link"><span class="label"><ion-icon name="logo-discord" role="img" class="md hydrated"></ion-icon></span></a></li>
+						<li><a href="https://www.paypal.com/paypalme/eldritchships" class="social-link"><ion-icon name="logo-paypal" role="img" class="md hydrated"></ion-icon></a></li>
+						<li><a href="https://github.com/Eldritch-Ships-Studios" class="social-link"><ion-icon name="logo-github" role="img" class="md hydrated"></ion-icon></a></li>
+					</ul>
+				</article>
+
+				<!-- gallery -->
+				<article id="gallery">
+					<h2 class="major">Gallery</h2>
+					<p>3D models made with <a href="https://www.blender.org/">blender</a>. Unless attributed to other parties, works are a part of the public domain. Two of the videos use music from the artists, <a href="https://sonnyboy93.bandcamp.com/">sonnyboy93</a> and <a href="https://lonepeakmusic.bandcamp.com">Lone Peak Music</a>, both of which can be found on their bandcamps.</p>
+					<ul>
+						<li class="galleryitem">
+							<h3>Vapour Loops</h3>
+							<video width="852" height="480" controls playsinline loop  preload="metadata" poster="./images/blender/Vapour Loops.webp">
+								<source src="/images/blender/Vapour Loops.webm" type="video/webm">
+								<source src="/images/blender/Vapour Loops.mp4" type="video/mp4">
+								Your browser does not support the video tag.</video>
+							<p>Music Provided & Produced by <a class="external" href="https://soundcloud.com/sonnyboy93/vapourloop/s-DCpltWoJ9lb"><b>sonnyboy93</b></a></p>
+							<a href="./images/blender/Vapour Loops.blend"  download="Vapour Loops.blend"><button class="button alt">Blend File</button></a>
+							<a href="./images/blender/Vapour Loops.mp4" download="Vapour Loops.mp4"><button class="button alt">1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Countdown 314</h3>
+							<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./images/blender/Countdown 314.webp">
+                        		<source src="./images/blender/Countdown 314(compressed).mp4" type="video/mp4">                            		
+								Your browser does not support the video tag.</video>
+							<p>A countdown from 3:14 to 0</p>
+							<a href="./images/Countdown 314.blend" download="Countdown 314.blend"><button class="button alt">Blend File</button></a>
+							<a href="./images/blender/Countdown 314(compressed).mp4" download="Countdown 314.mp4"><button class="button alt">1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Vaporwave Mountains</h3>
+							<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./images/blender/Vaporwave Mountains.webp">
+								<source src="./images/blender/Vaporwave Mountains.webm" type="video/webm">                            		
+								<source src="./images/blender/Vaporwave Mountains.mp4" type="video/mp4">
+								Your browser does not support the video tag.</video>
+							<p>Mountain animation with a vaporwave aesthetic</p>
+							<a href="./images/Countdown 314.blend" download="Countdown 314.blend"><button class="button alt">Blend File</button></a>
+							<a href="./images/blender/Countdown 314(compressed).mp4" download="Countdown 314.mp4"><button class="button alt">1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Light Tunnel</h3>
+							<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./images/blender/Light Tunnel.webp">
+                        		<source src="./images/blender/Light Tunnel.webm" type="video/webm">
+                        		<source src="./images/blender/Light Tunnel.mp4" type="video/mp4">
+                        		Your browser does not support the video tag.</video>
+							<p></p>
+							<a href="./images/blender/Light Tunnel.blend" download="Light Tunnel.blend"><button>Blend File</button></a>
+                        	<a href="./images/blender/Light Tunnel.mp4" download="Light Tunnel.mp4"><button>1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Sand River</h3>
+							<video width="852" height="480" controls playsinline loop preload="metadata" poster="./images/blender/Sand River.webp">
+                        		<source src="./images/blender/Sand River(Compressed).mp4" type="video/mp4">
+                        		Your browser does not support the video tag.</video>
+							<p>Music Provided & Produced by <a class="external" href="https://lonepeakmusic.bandcamp.com/track/sand-river-guitar-version"><b>Lone Peak Music</b></a></p>
+							<a href="./images/blender/Sand River.blend" download="Sand River.blend"><button>Blend File</button></a>
+                        	<a href="./images/blender/Sand River(Compressed).mp4" download="Sand River.blend"><button>1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Purple Tunnel</h3>
+							<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./images/blender/Purple Tunnel.webp">
+                        		<source src="./images/blender/Purple Tunnel.webm" type="video/webm">
+                        		<source src="./images/blender/Purple Tunnel.mp4" type="video/mp4">
+                        		Your browser does not support the video tag.</video>
+							<p></p>
+							<a href="./images/blender/Purple Tunnel.blend" download="Purple Tunnel.blend"><button>Blend File</button></a>
+                    		<a href="./images/blender/Purple Tunnel.mp4" download="Purple Tunnel.mp4"><button>1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Blue Cube</h3>
+							<img src="./images/blender/Blue Cube.webp" width="852" height="480" alt="Blue Cube">
+							<p></p>
+							<a href="./images/blender/Blue Cube.blend" download="Blue Cube.blend"><button>Blend File</button></a>
+                        	<a href="./images/blender/Blue Cube.png" download="Blue Cube.png"><button>1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>🅱️epsi Man Can</h3>
+							<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./images/blender/🅱️epsi Man Can.webp">
+                        		<source src="./images/blender/🅱️epsi Man Can.webm" type="video/webm">
+                        		<source src="./images/blender/🅱️epsi Man Can.mp4" type="video/mp4">                            		
+								Your browser does not support the video tag.</video>
+							<p>Pepsi Man as an aluminum can texture</p>
+							<a href="./images/blender/🅱️epsi Man Can.blend" download="🅱️epsi Man Can.blend"><button>Blend File</button></a>
+                    		<a href="./images/blender/🅱️epsi Man Can.mp4" download="🅱️epsi Man Can.mp4"><button>1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Hyperspace Card</h3>
+							<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./images/blender/Hyperspace Card.webp">
+                        		<source src="./images/blender/Hyperspace Card.webm" type="video/webm">
+								<source src="./images/blender/Hyperspace Card.mp4" type="video/mp4">
+                            	Your browser does not support the video tag.</video>
+							<p></p>
+							<a href="./images/blender/Hyperspace Card.blend" download="Hyperspace Card.blend"><button>Blend File</button></a>
+                    		<a href="./images/blender/Hyperspace Card.mp4" download="Hyperspace Card.mp4"><button>1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Cog Spin</h3>
+							<video width="852" height="480" controls playsinline loop muted preload="metadata" poster="./images/blender/Cog Spin.webp">
+                        		<source src="./images/blender/Cog Spin.webm" type="video/webm">
+								<source src="./images/blender/Cog Spin.mp4" type="video/mp4">
+                            		Your browser does not support the video tag.</video>
+							<p></p>
+							<a href="./images/blender/Cog Spin.blend" download="Cog Spin.blend"><button>Blend File</button></a>
+                    		<a href="./images/blender/Cog Spin.mp4" download="Cog Spin.mp4"><button>1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Library</h3>
+							<img src="./images/blender/Library.webp" width="852" height="480" alt="Library">
+							<p>A calm reading environment</p>
+							<a href="./images/blender/Library.blend" download="Library.blend"><button>Blend File</button></a>
+                        	<a href="./images/blender/Library.png" download="Library.png"><button>1920x1080</button></a>
+						</li>
+						<li class="galleryitem">
+							<h3>Breakfast</h3>
+							<img src="./images/blender/Breakfast.webp" width="852" height="480" alt="Breakfast">
+							<p></p>
+				            <a href="./images/blender/Breakfast.blend" download="Breakfast.blend"><button>Blend File</button></a>
+							<a href="./images/blender/Breakfast.png" download="Breakfast.png"><button>1920x1080</button></a>
+						</li>
+					</ul>
+				</article>
+
+				<!-- games -->
+				<article id="games">
+					<h2 class="major">Games</h2>
+					<p>Games made with <a href="https://godotengine.org/">GODOT</a> or in vanilla Javascript. The current selection includes; Pong, Rock, Paper, Scissors, Whac a Mole, Frogger, and Connect 4.</p>
+					<ul>
+						<li>
+							<h3>Pong</h3>
+							<p>A remake of Pong available to download and play on windows computers.</p>
+							<iframe frameborder="0" src="https://itch.io/embed/2231315?border_width=5&amp;border_color=e53b44" width="560" height="175"><a href="https://eldritchships.itch.io/pong">Pong by Eldritch Ships Studios</a></iframe> 
+						</li>
+						<li>
+							<h3>Rock, Paper, Scissors</h3>
+							<ul>
+								<li class="rules">
+									<p><b>Rules:</b> Choose either; Rock, Paper, or Scissors and test your luck aginst a computer also choosing Rock, Paper, or Scissors. Paper beats Rock. Rock beats Scissors. Scissors beats Paper.</p>
+									<br>
+									<h3>Score: <span id="rpsResult"></span></h3>
+								</li>
+								<li class="game">       
+									<h3>Your Choice: <span id="user-choice"></span></h3>
+									<button class="rpsButton" id="Rock">Rock</button>
+									<button class="rpsButton" id="Paper">Paper</button>
+									<button class="rpsButton" id="Scissors">Scissors</button>
+									<br>
+									<br>
+									<br>
+									<h3>Computer Choice: <span id="computer-choice"></span></h3>
+								</li>
+							</ul>
+						</li> 
+						<!--<li>
+							<h3>Memory</h3>
+							<ul>
+								<li class="rules">
+									<p><b>Rules:</b> Choose a tile and click to flip it over, revealing it's hidden secrets underneath. If you reveal 2 matching tiles, you score. Match them all to win.</p>
+									<br>
+									<h3 style="display: block;">Score: <span id="memScore">0</span></h3>
+								</li>
+								<li class="game">       
+									<div id="memGrid">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="0" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="1" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="2" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="3" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="4" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="5" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="6" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="7" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="8" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="9" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="10" class="memCard">
+										<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="11" class="memCard">
+									</div>
+								</li>
+							</ul>
+						</li>-->
 					<li>
-                    	<h3>Rock, Paper, Scissors</h3>
-                    	<ul>
-                        	<li class="rules">
-                            	<p><b>Rules:</b> Choose either; Rock, Paper, or Scissors and test your luck aginst a computer also choosing Rock, Paper, or Scissors. Paper beats Rock. Rock beats Scissors. Scissors beats Paper.</p>
-                            	<br>
-                            	<h3>Score: <span id="rpsResult"></span></h3>
-                        	</li>
-                        	<li class="game">       
-                            	<h3>Your Choice: <span id="user-choice"></span></h3>
-                            	<button class="rpsButton" id="Rock">Rock</button>
-                            	<button class="rpsButton" id="Paper">Paper</button>
-                            	<button class="rpsButton" id="Scissors">Scissors</button>
-                            	<br>
-                            	<br>
-                            	<br>
-                            	<h3>Computer Choice: <span id="computer-choice"></span></h3>
-                        	</li>
-                    	</ul>
-                	</li> 
-                	<!--<li>
-                    	<h3>Memory</h3>
-                    	<ul>
-                        	<li class="rules">
-                            	<p><b>Rules:</b> Choose a tile and click to flip it over, revealing it's hidden secrets underneath. If you reveal 2 matching tiles, you score. Match them all to win.</p>
-                            	<br>
-                            	<h3 style="display: block;">Score: <span id="memScore">0</span></h3>
-                        	</li>
-                        	<li class="game">       
-                            	<div id="memGrid">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="0" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="1" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="2" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="3" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="4" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="5" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="6" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="7" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="8" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="9" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="10" class="memCard">
-									<img src="https://www.eldritchships.com/Resources/memory/blank.png" data-id="11" class="memCard">
+						<h3>Whac a Mole</h3>
+						<ul>
+							<li class="rules">
+								<p><b>Rules:</b> Start the mole with the start button. The mole will pop up in one of the nine holes. Click to whack that mole and score before time runs out.</p>
+								<br>
+								<button id="moleStart">Start</button>
+								<br>
+								<br>
+								<h3>Score: <span id="moleScore">0</span></h3>
+								<h3>Time Remaining: <span id="moleTime">60</span></h3>
+							</li>
+							<li class="game">
+								<div id="moleGrid">
+									<div class="moleHole" id="moleHole1"></div>
+									<div class="moleHole" id="moleHole2"></div>
+									<div class="moleHole" id="moleHole3"></div>
+									<div class="moleHole" id="moleHole4"></div>
+									<div class="moleHole" id="moleHole5"></div>
+									<div class="moleHole" id="moleHole6"></div>
+									<div class="moleHole" id="moleHole7"></div>
+									<div class="moleHole" id="moleHole8"></div>
+									<div class="moleHole" id="moleHole9"></div>
+								</div>       
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3>Frogger</h3>
+						<ul>
+							<li class="rules">
+								<p><b>Rules:</b> Start the logs with the start button. Advance Frogger forward acrossed the water over the logs with the arrow keys. Reach the red block to win.</p>
+								<br>
+								<p>Not available on mobile controls at the moment</p>
+								<br>
+								<button id="frogStart">Start</button>
+								<br>
+								<h3>Time Remaining: <span id="frogTime">60</span></h3>
+								<h3><span id="frogScore"></span></h3>
+							</li>
+							<li class="game">
+								<div class="frogGrid">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div class="ending-block" style="color: #222;">Goal </div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div class="log-left l1"></div>
+									<div class="log-left l2"></div>
+									<div class="log-left l3"></div>
+									<div class="log-left l4"></div>
+									<div class="log-left l5"></div>
+									<div class="log-left l1"></div>
+									<div class="log-left l2"></div>
+									<div class="log-left l3"></div>
+									<div class="log-left l4"></div>
+									<div class="log-right l5"></div>
+									<div class="log-right l1"></div>
+									<div class="log-right l2"></div>
+									<div class="log-right l3"></div>
+									<div class="log-right l4"></div>
+									<div class="log-right l5"></div>
+									<div class="log-right l1"></div>
+									<div class="log-right l2"></div>
+									<div class="log-right l3"></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div class="car-left c1"></div>
+									<div class="car-left c2"></div>
+									<div class="car-left c3"></div>
+									<div class="car-left c1"></div>
+									<div class="car-left c2"></div>
+									<div class="car-left c3"></div>
+									<div class="car-left c1"></div>
+									<div class="car-left c2"></div>
+									<div class="car-left c3"></div>
+									<div class="car-right c1"></div>
+									<div class="car-right c2"></div>
+									<div class="car-right c3"></div>
+									<div class="car-right c1"></div>
+									<div class="car-right c2"></div>
+									<div class="car-right c3"></div>
+									<div class="car-right c1"></div>
+									<div class="car-right c2"></div>
+									<div class="car-right c3"></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div class="starting-block frog" style="color: #222;">Start</div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>       
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3>Connect 4</h3>
+						<ul>
+							<li class="rules">
+								<p><b>Rules:</b> Start by having player one place a token on the bottom row. Take turns placing tokens until one player has 4 tokens in a row.</p>
+								<br>
+								<h3>The current player is: Player <span id="connect4Current-player">1</span></h3>
+								<br>
+								<h3 id="connect4Result"></h3>
+							</li>
+							<li class="game">
+								<div class="connect4Grid">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+							
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+							
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+							
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+							
+									<div></div>
+									<div></div>
+							
+									<div class="taken"></div>
+									<div class="taken"></div>
+									<div class="taken"></div>
+									<div class="taken"></div>
+									<div class="taken"></div>
+									<div class="taken"></div>
+									<div class="taken"></div>
 								</div>
-                        	</li>
-                    	</ul>
-                	</li>-->
-                <li>
-                    <h3>Whac a Mole</h3>
-                    <ul>
-                        <li class="rules">
-                            <p><b>Rules:</b> Start the mole with the start button. The mole will pop up in one of the nine holes. Click to whack that mole and score before time runs out.</p>
-                            <br>
-                            <button id="moleStart">Start</button>
-                            <br>
-                            <br>
-                            <h3>Score: <span id="moleScore">0</span></h3>
-                            <h3>Time Remaining: <span id="moleTime">60</span></h3>
-                        </li>
-                        <li class="game">
-                            <div id="moleGrid">
-                                <div class="moleHole" id="moleHole1"></div>
-                                <div class="moleHole" id="moleHole2"></div>
-                                <div class="moleHole" id="moleHole3"></div>
-                                <div class="moleHole" id="moleHole4"></div>
-                                <div class="moleHole" id="moleHole5"></div>
-                                <div class="moleHole" id="moleHole6"></div>
-                                <div class="moleHole" id="moleHole7"></div>
-                                <div class="moleHole" id="moleHole8"></div>
-                                <div class="moleHole" id="moleHole9"></div>
-                            </div>       
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Frogger</h3>
-                    <ul>
-                        <li class="rules">
-                            <p><b>Rules:</b> Start the logs with the start button. Advance Frogger forward acrossed the water over the logs with the arrow keys. Reach the red block to win.</p>
-                            <br>
-                            <p>Not available on mobile controls at the moment</p>
-                            <br>
-                            <button id="frogStart">Start</button>
-                            <br>
-                            <h3>Time Remaining: <span id="frogTime">60</span></h3>
-                            <h3><span id="frogScore"></span></h3>
-                        </li>
-                        <li class="game">
-                            <div class="frogGrid">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div class="ending-block" style="color: #222;">Goal </div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div class="log-left l1"></div>
-                                <div class="log-left l2"></div>
-                                <div class="log-left l3"></div>
-                                <div class="log-left l4"></div>
-                                <div class="log-left l5"></div>
-                                <div class="log-left l1"></div>
-                                <div class="log-left l2"></div>
-                                <div class="log-left l3"></div>
-                                <div class="log-left l4"></div>
-                                <div class="log-right l5"></div>
-                                <div class="log-right l1"></div>
-                                <div class="log-right l2"></div>
-                                <div class="log-right l3"></div>
-                                <div class="log-right l4"></div>
-                                <div class="log-right l5"></div>
-                                <div class="log-right l1"></div>
-                                <div class="log-right l2"></div>
-                                <div class="log-right l3"></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div class="car-left c1"></div>
-                                <div class="car-left c2"></div>
-                                <div class="car-left c3"></div>
-                                <div class="car-left c1"></div>
-                                <div class="car-left c2"></div>
-                                <div class="car-left c3"></div>
-                                <div class="car-left c1"></div>
-                                <div class="car-left c2"></div>
-                                <div class="car-left c3"></div>
-                                <div class="car-right c1"></div>
-                                <div class="car-right c2"></div>
-                                <div class="car-right c3"></div>
-                                <div class="car-right c1"></div>
-                                <div class="car-right c2"></div>
-                                <div class="car-right c3"></div>
-                                <div class="car-right c1"></div>
-                                <div class="car-right c2"></div>
-                                <div class="car-right c3"></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div class="starting-block frog" style="color: #222;">Start</div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>       
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Connect 4</h3>
-                    <ul>
-                        <li class="rules">
-                            <p><b>Rules:</b> Start by having player one place a token on the bottom row. Take turns placing tokens until one player has 4 tokens in a row.</p>
-                            <br>
-                            <h3>The current player is: Player <span id="connect4Current-player">1</span></h3>
-                            <br>
-                            <h3 id="connect4Result"></h3>
-                        </li>
-                        <li class="game">
-                            <div class="connect4Grid">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                        
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                        
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                        
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                        
-                                <div></div>
-                                <div></div>
-                        
-                                <div class="taken"></div>
-                                <div class="taken"></div>
-                                <div class="taken"></div>
-                                <div class="taken"></div>
-                                <div class="taken"></div>
-                                <div class="taken"></div>
-                                <div class="taken"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            <script src="/JS/games.js"></script>
-        	</div>
+							</li>
+						</ul>
+					</li>
+				<script src="/assets/js/games.js"></script>
+				</article>
 
-            <div class="tab">
-				<h2>Stream</h2>
-				<ul>
-					<li class="iframeContainer">
-						<h3>Live Stream</h3>
-						<!-- Add a placeholder for the Twitch embed -->
-						<div id="twitch-embed"></div>
-
-						<!-- Load the Twitch embed script -->
-						<script src="https://embed.twitch.tv/embed/v1.js"></script>
+				<!-- stream -->
+				<article id="stream">
+					<h2 class="major">Stream</h2>
+					<ul>
+						<li class="iframeContainer">
+							<h3>Live Stream</h3>
+							<!-- Add a placeholder for the Twitch embed -->
+							<div id="twitch-embed"></div>
 	
-						<!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-						<script type="text/javascript">
-							new Twitch.Embed("twitch-embed", {
-								width: 480,
-								height: 500,
-								channel: "lightningCog",
-							});
-						</script>
-					</li>
-					<li class="iframeContainer">
-						<h3>Previous Streams</h3>
-						<iframe width="480 px" height="320 px" src="https://www.youtube.com/embed/videoseries?list=PLUDrRPpcKvQj49O1A4ov5VdKwEPih4eNj" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</li>
-				</ul>
+							<!-- Load the Twitch embed script -->
+							<script src="https://embed.twitch.tv/embed/v1.js"></script>
+		
+							<!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+							<script type="text/javascript">
+								new Twitch.Embed("twitch-embed", {
+									width: 480,
+									height: 500,
+									channel: "lightningCog",
+								});
+							</script>
+						</li>
+						<li class="iframeContainer">
+							<h3>Previous Streams</h3>
+							<iframe width="480 px" height="320 px" src="https://www.youtube.com/embed/videoseries?list=PLUDrRPpcKvQj49O1A4ov5VdKwEPih4eNj" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						</li>
+					</ul>
+				</article>
 			</div>
-        </div>
-    </main>
-    <footer>
-		<h2>Eldritch Ships Studios</h2>
-        <nav>  
-            <a href="mailto:LightningCog@eldritchships.com" target="_blank" rel="noopener" title="email">
-				<ion-icon name="mail"></ion-icon>
-			</a>
-			<a href="https://discord.gg/s2VrDD9fGK" class="social-link">
-				<ion-icon name="logo-discord" role="img" class="md hydrated"></ion-icon>
-			</a>
-			<a href="https://www.youtube.com/channel/UCcYjAOWxGSd-RWt2jJTY92Q" class="social-link">
-				<ion-icon name="logo-youtube" role="img" class="md hydrated"></ion-icon>
-			</a>
-			<a href="https://www.twitch.tv/lightningcog" class="social-link">
-				<ion-icon name="logo-twitch" role="img" class="md hydrated"></ion-icon>
-			</a>
-			<a href="https://soundcloud.com/lightningcog" class="social-link">
-				<ion-icon name="logo-soundcloud" role="img" class="md hydrated"></ion-icon>
-			</a>
-			<a href="https://www.paypal.com/paypalme/eldritchships" class="social-link">
-				<ion-icon name="logo-paypal" role="img" class="md hydrated"></ion-icon>
-			</a>
-			<a href="https://github.com/Eldritch-Ships-Studios" class="social-link">
-				<ion-icon name="logo-github" role="img" class="md hydrated"></ion-icon>
-			</a>
-        </nav>
-    </footer>    
-</body>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<nav class="copyright">
+					<a href="mailto:LightningCog@eldritchships.com" target="_blank" rel="noopener" title="email"><ion-icon name="mail"></ion-icon></a>
+					<a href="https://discord.gg/s2VrDD9fGK" class="social-link"><ion-icon name="logo-discord" role="img" class="md hydrated"></ion-icon></a>
+					<a href="https://www.youtube.com/channel/UCcYjAOWxGSd-RWt2jJTY92Q" class="social-link"><ion-icon name="logo-youtube" role="img" class="md hydrated"></ion-icon></a>
+					<a href="https://www.twitch.tv/lightningcog" class="social-link"><ion-icon name="logo-twitch" role="img" class="md hydrated"></ion-icon></a>
+					<a href="https://soundcloud.com/lightningcog" class="social-link"><ion-icon name="logo-soundcloud" role="img" class="md hydrated"></ion-icon></a>
+					<a href="https://www.paypal.com/paypalme/eldritchships" class="social-link"><ion-icon name="logo-paypal" role="img" class="md hydrated"></ion-icon></a>
+					<a href="https://github.com/Eldritch-Ships-Studios" class="social-link"><ion-icon name="logo-github" role="img" class="md hydrated"></ion-icon></a>
+				</nav>
+			</footer>
+		</div>
+
+		<!-- BG -->
+		<div id="bg"></div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
 </html>
