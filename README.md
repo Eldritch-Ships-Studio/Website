@@ -1,7 +1,7 @@
 # Eldritch Ships Studios
 ![Eldritch Ships Logo](https://www.eldritchships.com/images/icons/eldritchShipsStudios/EldritchShipsLogo.svg)
 Eldritch Ships Studios is a freelance 3d art & game studio.
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.eldritchships.com%2F)![GitHub repo file count](https://img.shields.io/github/directory-file-count/Eldritch-Ships-Studios/Website)![GitHub repo size](https://img.shields.io/github/repo-size/Eldritch-Ships-Studios/Website)![GitHub Org's stars](https://img.shields.io/github/stars/Eldritch-Ships-Studios?style=social)![Discord](https://img.shields.io/discord/652336786227593247?style=social)![Twitch Status](https://img.shields.io/twitch/status/LightningCog?style=social)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.eldritchships.com%2F)![GitHub repo file count](https://img.shields.io/github/directory-file-count/Eldritch-Ships-Studio/Website)![GitHub repo size](https://img.shields.io/github/repo-size/Eldritch-Ships-Studio/Website)![GitHub Org's stars](https://img.shields.io/github/stars/Eldritch-Ships-Studio?style=social)![Discord](https://img.shields.io/discord/652336786227593247?style=social)![Twitch Status](https://img.shields.io/twitch/status/LightningCog?style=social)
 
 # Installation
 This website is available as a Progressive Web Application or as a webpage. Our website is hosted at [EldritchShips.com](https://www.EldritchShips.com) with Github Pages.
