@@ -14,6 +14,7 @@ We are open to platforming, collaborating or otherwise working with other artist
 - Games made with [Godot Engine](https://github.com/godotengine/godot).
 - Icons from [Ionic Icons](https://github.com/ionic-team/ionicons).
 - Fonts from Github; [Hubot Sans](https://github.com/github/hubot-sans), and [Mona Sans](https://github.com/github/mona-sans).
+- Style Guide from [Google Style Guides](https://github.com/google/styleguide).
 
 # License
 This repository is explicitly a part of the public domain.

@@ -4,6 +4,7 @@ html {
   h1,h2,h3,h4,h5,h6,a {
 	font-family: 'Hubot Sans';
   }
+  
 /* ------------------- */
 /* Custom properties   */
 /* ------------------- */
@@ -25,6 +26,7 @@ html {
     --fs-300: 1rem;
     --fs-200: 0.875rem;
 }
+
 /* ------------------- */
 /* Reset               */
 /* ------------------- */
@@ -51,6 +53,7 @@ figure,
 picture {
     margin: 0; 
 }
+
 h1,
 h2,
 h3,
@@ -87,6 +90,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
 /* ------------------- */
 /* Utility classes     */
 /* ------------------- */
@@ -114,10 +118,10 @@ select {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
 }
+
 /* colors */
 
 .bg-dark { background-color: var(--clr-dark);}
@@ -137,6 +141,7 @@ select {
     margin: 0;
     padding: 0;
 }
+
 /*html {
     max-width: 100ch;
     padding: 3em 1em;
@@ -144,6 +149,7 @@ select {
     line-height: 1.75;
     font-size: 1.25em;
   }*/
+
 body {
     background-color:var(--clr-light);
     margin: 0px;
@@ -154,6 +160,7 @@ body {
     min-height: 100vh;
     background-color: var(--clr-light);
 }
+
 header, main, footer {
     height: 80%;
     background-color: var(--clr-light);
@@ -161,8 +168,9 @@ header, main, footer {
     padding: 1em;
     width: 100%;
 }
+
 header {
-    padding: 0em .5em 8em .5em;
+    padding: 0em 0.5em 8em 0.5em;
     width: fit-content;
     height: fit-content;
     align-items: center;
@@ -170,11 +178,12 @@ header {
     justify-content: center;
     justify-self: center;
     background-color: var(--clr-accent);
-    border-bottom: .5em solid var(--clr-dark);
+    border-bottom: 0.5em solid var(--clr-dark);
     border-radius: 0 0 50% 50%;
     margin-left: auto;
     margin-right: auto;
 }
+
 main {
     padding-inline: 0;
     margin-inline: auto;
@@ -183,6 +192,7 @@ main {
     padding: 2rem;
     margin: auto;*/
 }
+
 footer {
     position: relative;
     /*min-width: min-content;*/
@@ -191,26 +201,31 @@ footer {
     justify-content: center;
     justify-self: center;
     background-color: var(--clr-accent);
-    border-top: .5em solid var(--clr-dark);
+    border-top: 0.5em solid var(--clr-dark);
     width: auto;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50% 50% 0 0;
     letter-spacing: 0.1em;
   }
+
 a, h1, h2, h3, h4, h5, h6, p {
     text-decoration: none;
     color: var(--clr-dark);
 }
+
 h1 {
     font-size: var(--fs-800);
 }
+
 h2 {
     font-size: var(--fs-600);
 }
+
 h3 {
     font-size: var(--fs-500);
 }
+
 h4, h5, h6, p {
     font-size: var(--fs-400);
 }
@@ -218,21 +233,23 @@ h4, h5, h6, p {
 img, video {
     max-width: 100%;
     height: auto;
-    margin: .1em;
+    margin: 0.1em;
     margin-left: auto;
     margin-right: auto;
 }
+
 ion-icon {
     margin: auto;
-    padding: 0 .3em;
+    padding: 0 0.3em;
     color: var(--clr-dark);
     font-size: var(--fs-600)
 }
 
 header nav ion-icon {
     position: relative;
-    margin-top: .2em;
+    margin-top: 0.2em;
 }
+
 /*header nav {
     display: flex;
     position: relative;
@@ -248,29 +265,31 @@ header nav ion-icon {
     text-align: center;
     justify-self: center;
   }*/
+
 header nav a{
     display: inline;
     color: var(--clr-dark);
     background-color: var(--clr-light);
     text-align: center;
-    padding: 0em .2em;
-    margin: .1em;
+    padding: 0em 0.2em;
+    margin: 0.1em;
     text-decoration: none;
     border-radius: 15%;
-    border: .2em solid var(--clr-dark);
+    border: 0.2em solid var(--clr-dark);
     width: 6em;
     /*min-width: fit-content;*/
     min-height: fit-content;
   }
+
   nav {
-	padding: 0em .25em;
+	padding: 0em 0.25em;
     width: fit-content;
     align-items: center;
     text-align: center;
     justify-content: center;
     justify-self: center;
     background-color: var(--clr-accent);
-    border-bottom: .5em solid var(--clr-dark);
+    border-bottom: 0.5em solid var(--clr-dark);
     border-radius: 10% / 30%;
     margin-left: auto;
     margin-right: auto;    
@@ -286,18 +305,23 @@ header nav a{
     min-width: fit-content;
     height: 10%;
     text-align: center;
-    justify-self: center;*/}
+    justify-self: center;*/
+  }
+
 header nav a:hover {
     background-color: var(--clr-white);
   }
+
 header nav a.active {
     background-color: var(--clr-white);
     color: var(--clr-dark);
   }
+
 p {
     max-width: 60em;
     margin: auto;
 }
+
   button {
 	box-shadow: 3px 4px 0px 0px #899599;
 	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
@@ -312,12 +336,14 @@ p {
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
-    margin: .1em;
+    margin: 0.1em;
 }
+
 button:hover {
 	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
 	background-color:#bab1ba;
 }
+
 button:active {
 	position:relative;
 	top:1px;
@@ -328,14 +354,15 @@ ul {
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     overflow: auto;
 }
+
 li {
     list-style: none;
     align-items: center;
-    margin: .5em;
-    gap: .5em;
+    margin: 0.5em;
+    gap: 0.5em;
     /*filter: drop-shadow(.2em .4em .8em #222);*/
-    border: .25em solid var(--clr-dark);
-    padding: .25em 0;
+    border: 0.25em solid var(--clr-dark);
+    padding: 0.25em 0;
     scroll-snap-align: start;
     max-width: fit-content;
     background: var(--clr-accent);
@@ -345,6 +372,7 @@ li {
     width: 100%;
     /*padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
+
 .iframeContainer {
     max-width: 100%;
 	padding-top: 56.25%;
@@ -352,6 +380,7 @@ li {
 	width: 100%;
     overflow: hidden;
 }
+
 .iframeContainer iframe {
     position: absolute;
     top: 0;
@@ -359,15 +388,18 @@ li {
     width: 100%;
     height: 100%;
 }
+
 hr {
-    border: .45em solid var(--clr-dark);
+    border: 0.45em solid var(--clr-dark);
     width: 100%;
     margin: 1em;
     /*border-radius: 10%/30%;*/
 }
+
 .tab {
     overflow-x: hidden;
 }
+
 ul {overflow-x: hidden;}
 .rules, .game {
     box-sizing: border-box;
@@ -391,11 +423,11 @@ div.tab-frame label{
     display:block;
     float:left;
     padding:5px 10px;
-    margin: .5em; 
+    margin: 0.5em; 
     cursor:pointer;
     box-shadow: 3px 4px 0px 0px var(--clr-dark);
     border-radius: 15%;
-    border: .05em solid var(--clr-dark);
+    border: 0.05em solid var(--clr-dark);
 }
 div.tab-frame input:checked + label{ 
     background:var(--clr-accent); 
